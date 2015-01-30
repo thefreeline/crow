@@ -1,0 +1,4 @@
+Data Notes - 
+
+32 CSV files with supporting text files
+Some files contain duplicate data
