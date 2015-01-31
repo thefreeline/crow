@@ -7,7 +7,8 @@ var chart = d3.bullet()
     .height(height);
 
 d3.json("data/bullets.json", function(error, data) {
-  var svg = d3.select("#d3-chart-1").selectAll("svg")
+//d3.csv("data/test.csv", function(error, data) {
+  var svg = d3.select("#d3-chart-2").selectAll("svg")
       .data(data)
     .enter().append("svg")
       .attr("class", "bullet")
@@ -23,10 +24,10 @@ d3.json("data/bullets.json", function(error, data) {
 
   title.append("text")
       .attr("class", "title")
-      .text(function(d) { return d.title; });
+      .text(function(d) { return d.Metric; });
 
   title.append("text")
       .attr("class", "subtitle")
       .attr("dy", "1em")
-      .text(function(d) { return d.subtitle; });
+      .text(function(d) { return d.Metric; });
 });
