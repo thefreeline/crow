@@ -6,11 +6,17 @@ var chart = d3.bullet()
     .width(width)
     .height(height);
 
-d3.json("data/bullets.json", function(error, data) {
+
+//d3.json("data/bullets.json", function(error, data) {
 //d3.csv("data/test.csv", function(error, data) {
+d3.csv("data/2007_Condition_Data.csv", function(error, data) {  
+
+  //datafilter(data);
+
   var svg = d3.select("#d3-chart-2").selectAll("svg")
       .data(data)
     .enter().append("svg")
+    .filter( function(d) { return d["Result Category"] == "Poor"; })
       .attr("class", "bullet")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
@@ -31,3 +37,12 @@ d3.json("data/bullets.json", function(error, data) {
       .attr("dy", "1em")
       .text(function(d) { return d.Metric; });
 });
+
+function datafilter(d){
+  console.log(d)
+  //var sector = document.getElementById("sec");
+  //var sec = sector.options[sector.selectedIndex].value;
+  var resultCat = "Poor"
+  data = d.filter(function(d) { return d["Result Category"]  == resultCat;});
+  return data;
+}

@@ -1,3 +1,4 @@
 [
-  {"title":"Revenue","subtitle":"US$, in thousands","Lower Bound":[0.4],"Upper Bound":[0.6],"measures":[0.5],"markers":[0.25]}
+  {"title":"Revenue","subtitle":"US$, in thousands","Metric":"Phosphorous","Lower Bound":[0.4],"Upper Bound":[0.6],"Proportion":[0.5],"measures":[0.5],"markers":[0.25]},
+  {"title":"Revenue","subtitle":"US$, in thousands","Metric":"Phosphorous","Lower Bound":[0.4],"Upper Bound":[0.6],"Proportion":[0.5],"measures":[0.5],"markers":[0.25]}
 ]

@@ -3,7 +3,7 @@
 // Chart design based on the recommendations of Stephen Few. Implementation
 // based on the work of Clint Ivy, Jamie Love, and Jason Davies.
 // http://projects.instantcognition.com/protovis/bulletchart/
-d3.bullet = function() {
+d3.bullet = function(d) {
   var orient = "left", // TODO top & bottom
       reverse = false,
       duration = 250,
@@ -18,16 +18,19 @@ d3.bullet = function() {
   function bullet(g) {
     g.each(function(d, i) {
       console.log(d);
+      data = d;
       var //rangez = ranges.call(this, d, i).slice().sort(d3.descending),
-          markerz = markers.call(this, d, i).slice().sort(d3.descending),
-          measurez = measures.call(this, d, i).slice().sort(d3.descending),
-          startrange = d["Lower Bound"];
-          endrange = d["Upper Bound"];
+          //markerz = markers.call(this, d, i).slice().sort(d3.descending),
+          //measurez = measures.call(this, d, i).slice().sort(d3.descending),
+          startrange = [+d["Lower Bound"]],
+          endrange = [+d["Upper Bound"]],
+          proportion = [+d["Proportion"]],
           g = d3.select(this);
 
-          rangez = [300,225];
-          //console.log("rangez",rangez);
-          console.log("startrange",startrange)
+          //rangez = [300,225];
+          //console.log("measurez",measurez);
+          //console.log("startrange",startrange);
+          //console.log("endrange",endrange);
 
       // Compute the new x-scale.
       var x1 = d3.scale.linear()
@@ -50,7 +53,7 @@ d3.bullet = function() {
 
       // Update the measure rects.
       var measure = g.selectAll("rect.measure")
-          .data(measurez);
+          .data(proportion);
 
       measure.enter().append("rect")
           .attr("class", function(d, i) { return "measure s" + i; })
@@ -60,60 +63,28 @@ d3.bullet = function() {
           .attr("y", height / 3)
         .transition()
           .duration(duration)
-          .attr("width", w1)
-          .attr("x", reverse ? x1 : 0);
-
-      measure.transition()
-          .duration(duration)
-          .attr("width", w1)
+          .attr("width", x1(proportion))
           .attr("height", height / 1.25)
-          .attr("x", reverse ? x1 : 0)
+          .attr("x", 0)
           .attr("y", height / 8.5);
-
-      // Update the marker lines.
-      /*var marker = g.selectAll("line.marker")
-          .data(markerz);
-
-      marker.enter().append("line")
-          .attr("class", "marker")
-          .attr("x1", x0)
-          .attr("x2", x0)
-          .attr("y1", height / 6)
-          .attr("y2", height * 5 / 6)
-        .transition()
-          .duration(duration)
-          .attr("x1", x1)
-          .attr("x2", x1);
-
-      marker.transition()
-          .duration(duration)
-          .attr("x1", x1)
-          .attr("x2", x1)
-          .attr("y1", height / 6)
-          .attr("y2", height * 5 / 6);*/
 
       // Update the range rects.
       var range = g.selectAll("rect.range")
-          .data(rangez);
+          .data(startrange);
 
       range.enter().append("rect")
           .attr("class", function(d,i) { return "range s" + i; })
-          .attr("width", x1( endrange-startrange ) )
+          .attr("width", 0)
           .attr("height", height / 2)
           .attr("y", height / 4)
+          .attr("x", 0 )
+        .transition()
+          .duration(duration)
+        .attr("x", function(d,i) { return d[1]  })
           .attr("x", x1( startrange ) )
-        /*.transition()
-          .duration(duration)
-        .attr("x", function(d,i) { console.log(i,d); return d[1]  })
-          .attr("width", function(d,i) { return d[0]; })
-          //.attr("width", w1)
-          //.attr("x", reverse ? x1 : 0);
+          .attr("width", x1( endrange-startrange ) )
 
-      range.transition()
-          .duration(duration)
-          .attr("x", function(d,i) { return d[1]; })
-          .attr("width", function(d,i) { return d[0]; })
-          .attr("height", height);*/
+
 
       // Compute the tick format.
       var format = tickFormat || x1.tickFormat(8);
