@@ -17,12 +17,7 @@ d3.bullet = function(d) {
   // For each small multiple…
   function bullet(g) {
     g.each(function(d, i) {
-      console.log(d);
-      data = d;
-      var //rangez = ranges.call(this, d, i).slice().sort(d3.descending),
-          //markerz = markers.call(this, d, i).slice().sort(d3.descending),
-          //measurez = measures.call(this, d, i).slice().sort(d3.descending),
-          startrange = [+d["Lower Bound"]],
+      var startrange = [+d["Lower Bound"]],
           endrange = [+d["Upper Bound"]],
           proportion = [+d["Proportion"]],
           g = d3.select(this);

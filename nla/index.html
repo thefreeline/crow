@@ -59,6 +59,18 @@
             <div class="container">
                 <h1>Sample Bullet Charts</h1>
                 <p>This is where we are going to start our charts</p>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    Result Category
+                    <span class="caret"></span>
+                  </button>
+                  <ul id="dropdown-ul" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li> -->
+                  </ul>
+                </div>
+
+                <button onclick="updateData()">Update</button>
+
                 <div id="d3-chart-2">
                 </div>
             </div>
