@@ -1,8 +1,9 @@
 (function() {
 
-// Chart design based on the recommendations of Stephen Few. Implementation
-// based on the work of Clint Ivy, Jamie Love, and Jason Davies.
-// http://projects.instantcognition.com/protovis/bulletchart/
+
+
+console.log("Calling bullet");
+
 d3.bullet = function(d) {
   var orient = "left", // TODO top & bottom
       reverse = false,
@@ -14,18 +15,16 @@ d3.bullet = function(d) {
       height = 30,
       tickFormat = null;
 
+
+
   // For each small multiple…
   function bullet(g) {
+
     g.each(function(d, i) {
       var startrange = [+d["Lower Bound"]],
           endrange = [+d["Upper Bound"]],
           proportion = [+d["Proportion"]],
           g = d3.select(this);
-
-          //rangez = [300,225];
-          //console.log("measurez",measurez);
-          //console.log("startrange",startrange);
-          //console.log("endrange",endrange);
 
       // Compute the new x-scale.
       var x1 = d3.scale.linear()
@@ -44,8 +43,6 @@ d3.bullet = function(d) {
       var w0 = bulletWidth(x0),
           w1 = bulletWidth(x1);
 
-          //console.log(x0,x1)
-
       // Update the measure rects.
       var measure = g.selectAll("rect.measure")
           .data(proportion);
@@ -61,7 +58,9 @@ d3.bullet = function(d) {
           .attr("width", x1(proportion))
           .attr("height", height / 1.25)
           .attr("x", 0)
-          .attr("y", height / 8.5);
+          .attr("y", height / 8.5)
+        //.on('mouseover', tip.show)
+        //.on('mouseout', tip.hide);
 
       // Update the range rects.
       var range = g.selectAll("rect.range")

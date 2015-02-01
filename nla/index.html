@@ -57,22 +57,41 @@
 
         <main role="main">
             <div class="container">
-                <h1>Sample Bullet Charts</h1>
-                <p>This is where we are going to start our charts</p>
+                <h1>Lake Conditions</h1>
+                <p>Single Eco-region, Multiple Metrics...</p>
+                
                 <div class="dropdown">
-                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                    Result Category
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-result-cat" data-toggle="dropdown" aria-expanded="true">
+                    Poor
                     <span class="caret"></span>
                   </button>
-                  <ul id="dropdown-ul" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <!-- <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li> -->
+                  <ul id="dropdown-ul-result-cat" class="dropdown-menu" role="menu" aria-labelledby="dropdown-result-cat">
+                    <!-- LIs built from D3 -->
                   </ul>
                 </div>
 
-                <button onclick="updateData()">Update</button>
-
-                <div id="d3-chart-2">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-super-agg" data-toggle="dropdown" aria-expanded="true">
+                    Fed_nonFed
+                    <span class="caret"></span>
+                  </button>
+                  <ul id="dropdown-ul-super-agg" class="dropdown-menu" role="menu" aria-labelledby="dropdown-super-agg">
+                    <!-- LIs built from D3 -->
+                  </ul>
                 </div>
+
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-agg-level" data-toggle="dropdown" aria-expanded="true">
+                    BLM
+                    <span class="caret"></span>
+                  </button>
+                  <ul id="dropdown-ul-agg-level" class="dropdown-menu" role="menu" aria-labelledby="dropdown-agg-level">
+                    <!-- LIs built from D3 -->
+                  </ul>
+                </div>
+
+                <div id="d3-chart-2"></div>
+
             </div>
         </main>
 
@@ -80,11 +99,11 @@
             
         </footer>
         
-        
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>   
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>  
+        <script src="js/d3-tip.js"></script> 
         <script src="js/d3-bullet.js"></script> 
         <script src="js/d3-custom.js"></script> 
         <script src="js/main.js"></script>
