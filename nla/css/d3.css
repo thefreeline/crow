@@ -1,17 +1,35 @@
-.bullet { font: 10px sans-serif; }
-.bullet .marker { stroke: #000; stroke-width: 2px; }
-.bullet .tick line { stroke: #666; stroke-width: .5px; }
-.bullet .range.s0 { fill: rgba(244, 140, 140, 1); }
-.bullet .range.s1 { fill: rgba(244, 140, 140, 1); }
-.bullet .range.s2 { fill: rgba(244, 140, 140, 1); }
-.bullet .measure.s0 { fill: rgba(233, 24, 24,.1); stroke: rgb(233, 24, 24); }
-.bullet .measure.s1 { fill: steelblue; }
-.bullet .title { font-size: 14px; font-weight: bold; }
-.bullet .subtitle { fill: #999; }
+body                    { background:url('../img/linedpaper.png'); }
+#d3-chart-container     { width: 1060px; display: block; border: 1px solid gray; }
+#d3-bullet              { width: 560px; display: inline-block; border: 1px solid gray; }
+#d3-slope               { width: 72px; display: inline-block; border: 1px solid gray; }
+#d3-range               { width: 140px; display: inline-block; border: 1px solid gray; }
+
+/* BULLET STYLES */
+.bullet                 { font: 10px sans-serif; }
+.bullet .marker         { stroke: #000; stroke-width: 2px; }
+.bullet .tick line      { stroke: #666; stroke-width: .5px; }
+.bullet .range.s0       { fill: rgba(244, 140, 140, 1); }
+.bullet .range.s1       { fill: rgba(244, 140, 140, 1); }
+.bullet .range.s2       { fill: rgba(244, 140, 140, 1); }
+.bullet .confidence.s0  { fill: rgba(200, 200, 200, 1); }
+.bullet .confidence.s1  { fill: rgba(244, 140, 140, 1); }
+.bullet .measure.s0     { fill:#fbe1e2; stroke: rgb(233, 24, 24); }
+.bullet .title          { font-size: 14px; font-weight: bold; }
+.bullet .subtitle       { fill: #999; }
+
+/* SLOPE STYLES */
+.slope .measure         { stroke: rgba(244, 140, 140, 1); stroke-width: 2px; }
+.slope .measure-start   { fill: #fbe1e2; stroke: rgba(244, 140, 140, 1); stroke-width: 2px; }
+.slope .measure-end     { fill: #fbe1e2; stroke: rgba(244, 140, 140, 1); stroke-width: 2px; }
+
+.range path.significant-Yes { stroke: rgb(233, 24, 24); }
+.range path.significant-No  { stroke: rgba(244, 140, 140, 1);; }
+.range rect.significant-Yes { fill: rgb(233, 24, 24); }
+.range rect.significant-No  { fill: rgba(244, 140, 140, 1);; }
 
 .dropdown { display: inline-block; }
 
-.title, .subtitle { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+.title, .subtitle, .tick { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 
 
