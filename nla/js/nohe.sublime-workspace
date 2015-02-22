@@ -1,0 +1,1276 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"data",
+				"datafilter"
+			],
+			[
+				"pro",
+				"proportion"
+			],
+			[
+				"mease",
+				"measures"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"draw",
+				"drawChart"
+			],
+			[
+				"pos",
+				"posting"
+			],
+			[
+				"sa",
+				"saveChart"
+			],
+			[
+				"sele",
+				"selectAll"
+			],
+			[
+				"aja",
+				"ajaxGetDataFiles"
+			],
+			[
+				"selecte",
+				"selectedDataValue"
+			],
+			[
+				"select",
+				"selectedDataValue"
+			],
+			[
+				"get",
+				"getDataValue"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"selec",
+				"selectedDataValue"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"x",
+				"xMouse"
+			],
+			[
+				"node",
+				"nodeColor"
+			],
+			[
+				"link",
+				"linkcolor"
+			],
+			[
+				"fill",
+				"fill-opacity"
+			],
+			[
+				"s",
+				"style"
+			],
+			[
+				"d",
+				"data2"
+			],
+			[
+				"pre",
+				"prevR"
+			],
+			[
+				"new",
+				"newNode"
+			],
+			[
+				"nest",
+				"nested_data"
+			],
+			[
+				"o",
+				"output"
+			],
+			[
+				"cu",
+				"currentNode"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"child",
+				"children"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"tree",
+				"treeData"
+			],
+			[
+				"st",
+				"start_urls"
+			],
+			[
+				"c",
+				"circle"
+			],
+			[
+				"f",
+				"font-size"
+			],
+			[
+				"map",
+				"mapBackground"
+			],
+			[
+				"se",
+				"select"
+			],
+			[
+				"sel",
+				"selectAll"
+			],
+			[
+				"too",
+				"tooltip"
+			],
+			[
+				"to",
+				"tooltipContainer"
+			],
+			[
+				"bu",
+				"bubbles"
+			],
+			[
+				"tran",
+				"translate"
+			],
+			[
+				"par",
+				"parseInt"
+			],
+			[
+				"Co",
+				"CongNumb"
+			],
+			[
+				"a",
+				"attr"
+			],
+			[
+				"Total",
+				"TotalReceipts"
+			],
+			[
+				"can",
+				"candidate-summary-test"
+			],
+			[
+				"start",
+				"startInterval"
+			],
+			[
+				"cle",
+				"clearInterval"
+			],
+			[
+				"stop",
+				"stopInterval"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"out",
+				"outputUpdate"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"tool",
+				"tooltip-container"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"year",
+				"year-output"
+			],
+			[
+				"camp",
+				"campBubbles"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"cam",
+				"campBubbles"
+			],
+			[
+				"do",
+				"document"
+			],
+			[
+				"To",
+				"ToAnimate"
+			],
+			[
+				"Ani",
+				"AnimateButton"
+			],
+			[
+				"unic",
+				"unicorn_form_url"
+			],
+			[
+				"spli",
+				"spliceProtocol"
+			],
+			[
+				"ls",
+				"ls_AnimateGrid"
+			],
+			[
+				"anima",
+				"animateGrid"
+			],
+			[
+				"anim",
+				"animateGrid"
+			],
+			[
+				"An",
+				"AnimateButton"
+			],
+			[
+				"A",
+				"Attainment"
+			],
+			[
+				"som",
+				"someCollege"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"font-",
+				"font-style"
+			],
+			[
+				"class",
+				"classed"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"re",
+				"reverse"
+			],
+			[
+				"move",
+				"moveToFront"
+			],
+			[
+				"stroke-",
+				"stroke-width"
+			],
+			[
+				"sub",
+				"subcat"
+			],
+			[
+				"ser",
+				"Services"
+			],
+			[
+				"color",
+				"colorFilter"
+			],
+			[
+				"click",
+				"clickText"
+			],
+			[
+				"redra",
+				"redrawGraph"
+			],
+			[
+				"area",
+				"areaClick"
+			],
+			[
+				"Cl",
+				"clickText"
+			],
+			[
+				"trans",
+				"transformedFilter"
+			],
+			[
+				"init",
+				"initNewChart"
+			],
+			[
+				"clc",
+				"clickText"
+			],
+			[
+				"red",
+				"redrawOnClick"
+			],
+			[
+				"colo",
+				"colorFilter"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"gov",
+				"government"
+			],
+			[
+				"clic",
+				"clickText"
+			],
+			[
+				"dat",
+				"dataFilter"
+			],
+			[
+				"GovData",
+				"govDataFiltered"
+			],
+			[
+				"go",
+				"govDataFiltered"
+			],
+			[
+				"Go",
+				"Government"
+			],
+			[
+				"result",
+				"result"
+			],
+			[
+				"key",
+				"key"
+			],
+			[
+				"show",
+				"showResults"
+			],
+			[
+				"imag",
+				"imageWidth"
+			],
+			[
+				"rea",
+				"readyCount"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"app",
+				"appurl"
+			],
+			[
+				"cifs",
+				"CIFSurl"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"js",
+				"jsonState"
+			],
+			[
+				"cif",
+				"cifsLocation"
+			],
+			[
+				"opensa",
+				"opensans_bold"
+			],
+			[
+				"sea",
+				"searchArrSplit"
+			],
+			[
+				"keyword",
+				"keywordArr"
+			],
+			[
+				"searcha",
+				"searchArrSplit"
+			],
+			[
+				"inde",
+				"indexOf"
+			],
+			[
+				"searchArr",
+				"searchArrSplit"
+			],
+			[
+				"sear",
+				"searchArrSplit"
+			],
+			[
+				"fav",
+				"favItemPos"
+			],
+			[
+				"of",
+				"offset"
+			],
+			[
+				"fail",
+				"failState"
+			],
+			[
+				"set",
+				"setItem"
+			],
+			[
+				"acti",
+				"activeFilter"
+			],
+			[
+				"ap",
+				"apurl"
+			],
+			[
+				"man",
+				"mangledUrl"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"dev",
+				"dev_switch"
+			],
+			[
+				"dev_s",
+				"dev_switch_val"
+			],
+			[
+				"devS",
+				"devswitchFlag"
+			],
+			[
+				"local",
+				"localStorage"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Applications/MAMP/htdocs/nohe/index.html",
+			"settings":
+			{
+				"buffer_size": 3971,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Applications/MAMP/htdocs/nohe/js/d3-custom.js",
+			"settings":
+			{
+				"buffer_size": 3856,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Applications/MAMP/htdocs/nohe/js/d3-bullet.js",
+			"settings":
+			{
+				"buffer_size": 13049,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Applications/MAMP/htdocs/nohe/css/d3.css",
+			"settings":
+			{
+				"buffer_size": 1843,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"pu",
+				"Git: Push"
+			],
+			[
+				"stat",
+				"Git: Status"
+			],
+			[
+				"q",
+				"Git: Quick Commit"
+			],
+			[
+				"push",
+				"Git: Push"
+			],
+			[
+				"quic",
+				"Git: Quick Commit"
+			],
+			[
+				"qui",
+				"Git: Quick Commit"
+			],
+			[
+				"pus",
+				"Git: Push"
+			],
+			[
+				"qu",
+				"Git: Quick Commit"
+			],
+			[
+				"quci",
+				"Git: Quick Commit"
+			],
+			[
+				"Snippet: ",
+				"Snippet: isArray"
+			],
+			[
+				"snipp",
+				"Snippet: isArray"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"fetch",
+				"Git (SideBarGit): Fetch with options…"
+			],
+			[
+				"fetc",
+				"Git: Fetch"
+			],
+			[
+				"pull",
+				"Git (SideBarGit): Pull with options…"
+			],
+			[
+				"pul",
+				"Git: Pull"
+			],
+			[
+				"quick",
+				"Git: Quick Commit Current File"
+			],
+			[
+				"pac",
+				"Preferences: Browse Packages"
+			],
+			[
+				"git",
+				"Git: Pull"
+			],
+			[
+				"add",
+				"Git: Add Current File"
+			],
+			[
+				"com",
+				"Git: Commit"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"comm",
+				"Git: Commit"
+			],
+			[
+				"COMMIT",
+				"Git: Quick Commit Current File"
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"repo",
+				"Package Control: Add Repository"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"read",
+				"ReadmePlease"
+			],
+			[
+				"sideba",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 746.0
+	},
+	"console":
+	{
+		"height": 58.0,
+		"history":
+		[
+			"git fetch origin bd0c8511dc:e70e26dee89f314bae979bb84f000a0a1bef8fc8",
+			"git fetch https://grit.stsci.edu/lcsmith/aperture e70e26dee89f314bae979bb84f000a0a1bef8fc8",
+			"git fetch https://grit.stsci.edu/lcsmith/aperture.git e70e26dee89f314bae979bb84f000a0a1bef8fc8",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Applications/MAMP/htdocs/nohe",
+		"/Applications/MAMP/htdocs/nohe/css",
+		"/Applications/MAMP/htdocs/nohe/js"
+	],
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/crow/nla/css/main.css",
+		"/Applications/MAMP/htdocs/crow/nla/crow-nla.sublime-project",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/js/dndTree.js",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/savefile.php",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/main.css",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/index.html",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/greg/data/itemsentirenofiles5levels.json",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/greg/js/index.js",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/greg/itemsprocessed.json",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/greg/index.html",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/greg/greg.html",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/greg/data/itemsprocessed.json",
+		"/Applications/MAMP/htdocs/stsci-website-content-visualization/greg/treemap.html",
+		"/Applications/MAMP/htdocs/harvard-ads/citation-tree.json",
+		"/Users/lcsmith/.ads/dev_key",
+		"/Applications/MAMP/htdocs/python/scrapy/jwst_crawler/items.json",
+		"/Applications/MAMP/htdocs/python/scrapy/jwst_crawler/jwst_crawler/spiders/spider_jwst.py",
+		"/Applications/MAMP/htdocs/python/scrapy/jwst_crawler/jwst_crawler/spiders/jwst_spider.py",
+		"/Applications/MAMP/htdocs/python/scrapy/jwst_crawler/jwst_crawler/items.py",
+		"/Applications/MAMP/htdocs/python/scraper.py",
+		"/Applications/MAMP/htdocs/python/scrapy/tutorial/items.py",
+		"/Applications/MAMP/htdocs/python/scrapy/tutorial/spiders/items.json",
+		"/Applications/MAMP/htdocs/nodejs/program.js",
+		"/Applications/MAMP/htdocs/python/scrapy/tutorial/tutorial/items.py",
+		"/Applications/MAMP/htdocs/sandbox/css/c3/c3.css",
+		"/Applications/MAMP/htdocs/sandbox/campaign-finance-2012-v2.html",
+		"/Applications/MAMP/htdocs/sandbox/taj.html",
+		"/Users/lcsmith/Projects/JWST Website - Internal/internal/docarchive/jwstmo-presentations/SWG/December2014/content.html",
+		"/Applications/MAMP/htdocs/sandbox/highschool-dropout-count.html",
+		"/Applications/MAMP/htdocs/crazy-data-circles-master/10_interactivity.html",
+		"/Applications/MAMP/htdocs/sandbox/data/geo/us-capitals.csv",
+		"/Applications/MAMP/htdocs/sandbox/data/geo/us-states.json",
+		"/grp/websites/passage.stsci.edu/css/dev_main.css",
+		"/grp/websites/passage.stsci.edu/dev_index.html",
+		"/grp/websites/passage.stsci.edu/js/mixitup.js",
+		"/grp/websites/passage.stsci.edu/login.inc",
+		"/grp/websites/passage.stsci.edu/js/dev_main.js",
+		"/Applications/MAMP/htdocs/sandbox/median-income.html",
+		"/Applications/MAMP/htdocs/sandbox/us-employment-v7.html",
+		"/Applications/MAMP/htdocs/sandbox/css/us-employment.css",
+		"/Applications/MAMP/htdocs/sandbox/us-employment-v9.html",
+		"/Applications/MAMP/htdocs/sandbox/us-employment-v8.html",
+		"/Applications/MAMP/htdocs/sandbox/js/jquery-sparklines/jq-sparklines.js",
+		"/Applications/MAMP/htdocs/sandbox/js/d3/nvd3.js",
+		"/Applications/MAMP/htdocs/sandbox/js/d3/nvd3-customLegend.js",
+		"/Applications/MAMP/htdocs/sandbox/index.php",
+		"/Applications/MAMP/htdocs/sandbox/fte-sankey-v2.html",
+		"/Applications/MAMP/htdocs/sandbox/fte-sankey.html",
+		"/Applications/MAMP/htdocs/sandbox/us-employment.html",
+		"/Applications/MAMP/htdocs/sandbox/us-employment-bkup.html",
+		"/Applications/MAMP/htdocs/sandbox/data/nvd3-stacked-template.json",
+		"/Applications/MAMP/htdocs/sandbox/data/us-employment.json",
+		"/Applications/MAMP/htdocs/sandbox/d3/js/d3/nvd3.js",
+		"/Applications/MAMP/htdocs/sandbox/d3/js/d3.sankey-edit.js",
+		"/Applications/MAMP/htdocs/sandbox/d3/css/nvd3.css",
+		"/grp/websites/passage.stsci.edu/js/session.js",
+		"/grp/websites/passage.stsci.edu/tlbr.html",
+		"/grp/websites/passage.stsci.edu/js/toolbar.js",
+		"/grp/websites/passage.stsci.edu/cifs.html",
+		"/grp/websites/passage.stsci.edu/index.html",
+		"/grp/websites/passage.stsci.edu/portal.html",
+		"/grp/websites/passage.stsci.edu/js/main.js",
+		"/grp/websites/passage.stsci.edu/css/main.css",
+		"/grp/websites/passage.stsci.edu/js/apcf-helper.js",
+		"/Applications/MAMP/htdocs/d3/data/us.json",
+		"/Applications/MAMP/htdocs/d3/data/us-states.json",
+		"/grp/websites/passage.stsci.edu/js/shutter.js",
+		"/grp/websites/passage.stsci.edu/css/login.css",
+		"/Applications/MAMP/htdocs/frameworks_and_libraries/jquery.shutter.colored/assets/jquery.shutter/jquery.shutter.js",
+		"/Applications/MAMP/htdocs/frameworks_and_libraries/jquery.shutter.colored/assets/js/script.js",
+		"/Applications/MAMP/htdocs/frameworks_and_libraries/jquery.shutter.colored/index.html",
+		"/Users/lcsmith/Desktop/iphonels.py",
+		"/Users/lcsmith/Desktop/4096c9ec676f2847dc283405900e284a7c815836",
+		"/grp/websites/passage.stsci.edu/js/jquery.js",
+		"/Applications/MAMP/htdocs/frameworks_and_libraries/jquery.shutter/assets/js/script.js",
+		"/Users/lcsmith/Desktop/login-ORG.inc",
+		"/Applications/MAMP/htdocs/frameworks_and_libraries/jquery.shutter/assets/jquery.shutter/jquery.shutter.css",
+		"/Applications/MAMP/htdocs/frameworks_and_libraries/jquery.shutter/index.html",
+		"/Applications/MAMP/htdocs/frameworks_and_libraries/jquery.shutter/assets/css/styles.css",
+		"/Applications/MAMP/htdocs/frameworks_and_libraries/jquery.shutter/assets/jquery.shutter/jquery.shutter.js",
+		"/grp/websites/passage.stsci.edu/js/dev_plugins.js",
+		"/grp/websites/passage.stsci.edu/js/json2.js",
+		"/Users/lcsmith/Google Drive/_MVIZ5104 Statistics Bootcamp/_Assignments/_Assign1/procedure.pdf",
+		"/Users/lcsmith/Library/Application Support/Sublime Text 3/Packages/User/isArray.sublime-snippet",
+		"/Users/lcsmith/Library/Application Support/Sublime Text 3/Packages/User/isArray",
+		"/Applications/MAMP/htdocs/d3/newtonian.html",
+		"/Applications/MAMP/htdocs/d3/js/newtonian.js",
+		"/Applications/MAMP/htdocs/d3/planets.html",
+		"/Applications/MAMP/htdocs/d3/js/planets.js",
+		"/Users/lcsmith/Projects/Sublime Projects/Aperture/aperture.sublime-project",
+		"/Users/lcsmith/Library/Application Support/Sublime Text 3/Packages/LineEndings/readme.md",
+		"/Users/lcsmith/Library/Application Support/Sublime Text 3/Packages/C#/README.markdown",
+		"/Users/lcsmith/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/lcsmith/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/lcsmith/Desktop/cte.js",
+		"/grp/websites/passage.stsci.edu/mail.php",
+		"/grp/websites/apexdev.stsci.edu/pmo/sandbox-lcs/stsci_org_chart/data.json",
+		"/grp/websites/apexdev.stsci.edu/pmo/sandbox-lcs/stsci_org_chart/main.js",
+		"/grp/websites/apexdev.stsci.edu/pmo/sandbox-lcs/stsci_org_chart/style.css",
+		"/Applications/MAMP/htdocs/eyeodatavis-master/data/chadsmith_crosswalk_insideFlashingWarningSignal.csv",
+		"/grp/websites/apexdev.stsci.edu/pmo/sandbox-lcs/timeline/sandbox-timeline-gantt.js",
+		"/grp/websites/apexdev.stsci.edu/pmo/sandbox-lcs/timeline/sandbox-timeline.js",
+		"/Users/lcsmith/Projects/iPlan/_Exports/f102-DEV-20140520.sql",
+		"/grp/websites/apex.stsci.edu/pmo/pmodash/includes/css/stylesheet_v3_0.css",
+		"/grp/websites/apextest.stsci.edu/pmo/pmodash/includes/css/stylesheet_v3_0.css",
+		"/grp/websites/apexdev.stsci.edu/pmo/sandbox-lcs/jwstWithD3/main.js",
+		"/grp/websites/apexdev.stsci.edu/pmo/sandbox-lcs/jwstWithD3/findtheconversation.js",
+		"/Users/lcsmith/Desktop/delete.js",
+		"/Users/lcsmith/Projects/iPlan/_Exports/f102-DEV-20140515-NameEdit.sql",
+		"/Users/lcsmith/Projects/iPlan/_Exports/f102-PROD.sql",
+		"/Users/lcsmith/Projects/iPlan/_Exports/f102-13-MAY-2014v2.sql"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"startconfidenceMed",
+			"forma",
+			"proportion",
+			"confidence",
+			"range",
+			"filterRe",
+			"tip",
+			"reverse",
+			"s1",
+			"art-",
+			"h3",
+			"drag",
+			"replace",
+			"[{",
+			"overlay",
+			"click",
+			"tip",
+			"zoomL",
+			"centerN",
+			"center",
+			"colors",
+			"childrenFn",
+			"forea",
+			"\",)",
+			"parent",
+			"expand",
+			"opacityscale",
+			"desc",
+			"view",
+			"maxDes",
+			"update",
+			"sort",
+			"click",
+			"data2",
+			"id",
+			"d.x",
+			"links",
+			"size",
+			"visit",
+			"collapse",
+			"rangeInput",
+			",",
+			"desc",
+			"sort",
+			"candidate-summary-test.csv",
+			"candidate-summary-test.csv'",
+			"grid",
+			"repre",
+			"rect",
+			"1px solid",
+			"features",
+			"text",
+			"margin",
+			"rect",
+			"bubbles",
+			"tooltip",
+			"rect",
+			"383838",
+			"1B1B1B",
+			"1",
+			"class",
+			"fill",
+			"map",
+			"svg",
+			"campaign-bu",
+			"finance-",
+			"campBubbles",
+			"updateOutput",
+			"outputUpdate",
+			"window",
+			"localStore",
+			"data",
+			"anim",
+			"ls_AnimateGrid",
+			"animateGrid",
+			"container",
+			"filter",
+			"filter-g",
+			"Mixitup",
+			"filter-g",
+			"active",
+			"user",
+			"height",
+			"axisMax",
+			"chart-sv",
+			"nv.models.stack",
+			"legend",
+			"dataLvl2",
+			"dataFilter",
+			"transformed",
+			"svg",
+			"-946771200",
+			"1025409600000",
+			"format",
+			"dy",
+			"ssh",
+			"getE",
+			"ssh",
+			" language=\"JavaScript\"",
+			"language=\"JavaScript\"",
+			"                                <!--Begin List Divs -->\n",
+			"                                <!-- Begin Grid Divs -->\n",
+			"attr",
+			"id=\"\"",
+			"PROD",
+			"username",
+			"dev_switch",
+			"failState",
+			"activeFilter",
+			"username",
+			"lsFavorites",
+			"welcomePopup",
+			"PROD",
+			"firstTime",
+			"beenHere",
+			"ssh",
+			"jira",
+			"dev",
+			"cur_FTE",
+			"form_ta",
+			"ring",
+			"page",
+			"480",
+			".visibility = \"hidden\"",
+			"math",
+			"filter",
+			":hover",
+			".drop_down span"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"curvedQiss",
+			"range",
+			"confidence",
+			"sect-",
+			"h1",
+			"prevR",
+			",\n",
+			"252525",
+			"383838",
+			"campaign-",
+			"campaignBubbles",
+			"updateOutputTag",
+			"updateOutput",
+			"JSON.parse(ls_AnimateGrid)",
+			"ls_AnimateGrid",
+			"transformed",
+			"dataLvl2",
+			"25568.96078",
+			"-946771200",
+			"",
+			"ls_DevSwitch",
+			"ls_FailState",
+			"ls_ActiveFilter",
+			"ls_Username",
+			"ls_Favorites",
+			"ls_WelcomePopup",
+			"welcomeBanner",
+			"welcomePopup",
+			".display = \"none\"",
+			"/*:hover*/",
+			"#Filters .drop_down span",
+			"DRPWH",
+			"DRPBL",
+			"DRPHI",
+			"DRPAS",
+			"DRPAM",
+			"TOTDAM",
+			"TOTDBL",
+			"TOTDAS",
+			"TOTDWH",
+			"TOTDAS",
+			"TOTDHI",
+			"TOTD912",
+			"TOTDHI",
+			"TOTDBL",
+			"TOTDAS",
+			"DRP912",
+			"<a target=\"_blank\" href",
+			"header",
+			"dev_index",
+			"localStore_Fav",
+			"localStore_Favorites",
+			"",
+			"<p></p>",
+			"</h2>",
+			"<p></p>",
+			"</div>\n                                    <div class=\"grid-descr\">\n                                        <p></p>\n                                    </div>",
+			"</div>\n     <div class=\"grid-descr\">\n                                        <p></p>\n                                    </div>",
+			"</div>\n <div class=\"grid-descr\">\n                                        <p></p>\n                                    </div>",
+			"",
+			"<!-- This is a description of...-->",
+			"collaboration",
+			"ADHOC"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Applications/MAMP/htdocs/nohe/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3971,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1662,
+								1662
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 256.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Applications/MAMP/htdocs/nohe/js/d3-custom.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3856,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3706,
+								3706
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1482.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Applications/MAMP/htdocs/nohe/js/d3-bullet.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13049,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6180,
+								6180
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3785.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Applications/MAMP/htdocs/nohe/css/d3.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								656,
+								656
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 133.0
+	},
+	"output.git-commit":
+	{
+		"height": 124.0
+	},
+	"output.git-fetch":
+	{
+		"height": 124.0
+	},
+	"output.git-push":
+	{
+		"height": 118.0
+	},
+	"output.git-remote":
+	{
+		"height": 124.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 29.0
+	},
+	"project": "nohe.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 173.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
