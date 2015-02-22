@@ -4,6 +4,62 @@
 		"selected_items":
 		[
 			[
+				"slop",
+				"slopemargin"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"start",
+				"startSlope"
+			],
+			[
+				"to",
+				"toggleBut"
+			],
+			[
+				"range",
+				"rangesvg"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"tick",
+				"tickFormat"
+			],
+			[
+				"ran",
+				"rangewidth"
+			],
+			[
+				"end",
+				"endSlope"
+			],
+			[
+				"bu",
+				"bulletchart"
+			],
+			[
+				"slope",
+				"slopewidth"
+			],
+			[
+				"sl",
+				"slopeG"
+			],
+			[
+				"select",
+				"selectAll"
+			],
+			[
 				"back",
 				"background-color"
 			],
@@ -37,10 +93,6 @@
 			],
 			[
 				"selecte",
-				"selectedDataValue"
-			],
-			[
-				"select",
 				"selectedDataValue"
 			],
 			[
@@ -152,14 +204,6 @@
 				"tooltip"
 			],
 			[
-				"to",
-				"tooltipContainer"
-			],
-			[
-				"bu",
-				"bubbles"
-			],
-			[
 				"tran",
 				"translate"
 			],
@@ -182,10 +226,6 @@
 			[
 				"can",
 				"candidate-summary-test"
-			],
-			[
-				"start",
-				"startInterval"
 			],
 			[
 				"cle",
@@ -412,10 +452,6 @@
 				"readyCount"
 			],
 			[
-				"bac",
-				"background-color"
-			],
-			[
 				"app",
 				"appurl"
 			],
@@ -478,42 +514,6 @@
 			[
 				"set",
 				"setItem"
-			],
-			[
-				"acti",
-				"activeFilter"
-			],
-			[
-				"ap",
-				"apurl"
-			],
-			[
-				"man",
-				"mangledUrl"
-			],
-			[
-				"text",
-				"text-align"
-			],
-			[
-				"max",
-				"max-width"
-			],
-			[
-				"dev",
-				"dev_switch"
-			],
-			[
-				"dev_s",
-				"dev_switch_val"
-			],
-			[
-				"devS",
-				"devswitchFlag"
-			],
-			[
-				"local",
-				"localStorage"
 			]
 		]
 	},
@@ -523,7 +523,23 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 3486,
+				"buffer_size": 6252,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/d3-custom.js",
+			"settings":
+			{
+				"buffer_size": 9118,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/d3-slope.js",
+			"settings":
+			{
+				"buffer_size": 2699,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,52 +547,47 @@
 			"file": "js/d3-bullet.js",
 			"settings":
 			{
-				"buffer_size": 6331,
+				"buffer_size": 6748,
 				"line_ending": "Unix",
 				"name": "(function() {"
-			}
-		},
-		{
-			"file": "js/d3-custom.js",
-			"settings":
-			{
-				"buffer_size": 991,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "data/bullets.json",
-			"settings":
-			{
-				"buffer_size": 542,
-				"line_ending": "Unix",
-				"name": "["
 			}
 		},
 		{
 			"file": "css/d3.css",
 			"settings":
 			{
-				"buffer_size": 422,
-				"line_ending": "Unix",
-				"name": ".bullet { font: 10px sans-serif; }"
+				"buffer_size": 4813,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/main.js",
+			"file": "js/jQuery.lettering.js",
 			"settings":
 			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
+				"buffer_size": 1777,
+				"line_ending": "Unix",
+				"name": "/*global jQuery */"
 			}
 		}
 	],
-	"build_system": "",
+	"build_system": "Packages/SASS Build/SASS.sublime-build",
 	"command_palette":
 	{
-		"height": 67.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
 			[
 				"insall",
 				"Package Control: Install Package"
@@ -624,10 +635,6 @@
 			[
 				"snipp",
 				"Snippet: isArray"
-			],
-			[
-				"pack",
-				"Package Control: List Packages"
 			],
 			[
 				"fetch",
@@ -690,10 +697,6 @@
 				"Package Control: Add Repository"
 			],
 			[
-				"inst",
-				"Package Control: Install Package"
-			],
-			[
 				"read",
 				"ReadmePlease"
 			],
@@ -702,7 +705,7 @@
 				"View: Toggle Open Files in Side Bar"
 			]
 		],
-		"width": 746.0
+		"width": 680.0
 	},
 	"console":
 	{
@@ -726,6 +729,11 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/crow/nla/css/d3.scss.css",
+		"/Applications/MAMP/htdocs/crow/nla/css/test.scss.css",
+		"/Applications/MAMP/htdocs/crow/nla/js/d3-slope.js",
+		"/Applications/MAMP/htdocs/crow/nla/data/bullets.json",
+		"/Applications/MAMP/htdocs/crow/nla/js/main.js",
 		"/Users/lcsmith/Projects/JWST Website - Internal/_scripts/scripts.js",
 		"/Applications/MAMP/htdocs/stsci-website-content-visualization/js/dndTree.js",
 		"/Applications/MAMP/htdocs/stsci-website-content-visualization/savefile.php",
@@ -839,7 +847,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -853,6 +861,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ySlope",
+			"axis",
+			"btn-small",
+			"this",
+			"gray",
+			"tickF",
+			"format",
+			"bulletTr",
+			"\"Proportion\"",
+			"Upper Bound",
+			"Lower Bound",
 			"strong",
 			"art-",
 			"h3",
@@ -969,25 +988,20 @@
 			"page",
 			"480",
 			".visibility = \"hidden\"",
-			"math",
-			"filter",
-			":hover",
-			".drop_down span",
-			"drop_down span",
-			"form",
-			"unico",
-			"rdp",
-			"portal_too",
-			".drop_down",
-			".sort",
-			"DRPBL"
+			"math"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"yScale",
+			"btn-sm",
+			"#666",
+			"\"Proportion 2007\"",
+			"Upper Bound 2007",
+			"Lower Bound 2007",
 			"h3",
 			"sect-",
 			"h1",
@@ -1059,7 +1073,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -1068,45 +1082,103 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3486,
+						"buffer_size": 6252,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3406,
-								3406
+								3067,
+								3067
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 683.0,
+						"translation.y": 534.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/d3-custom.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1600,
+								1664
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "js/d3-bullet.js",
+					"buffer": 2,
+					"file": "js/d3-slope.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6331,
+						"buffer_size": 2699,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								764,
+								764
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 436.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/d3-bullet.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6748,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1359,
+								1365
 							]
 						],
 						"settings":
@@ -1120,66 +1192,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "js/d3-custom.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 991,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								991,
-								991
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "data/bullets.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 542,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								542,
-								542
-							]
-						],
-						"settings":
-						{
-							"auto_name": "[",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1188,24 +1201,25 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 422,
+						"buffer_size": 4813,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								422,
-								422
+								3793,
+								3793
 							]
 						],
 						"settings":
 						{
-							"auto_name": ".bullet { font: 10px sans-serif; }",
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 767.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -1213,30 +1227,32 @@
 				},
 				{
 					"buffer": 5,
-					"file": "js/main.js",
+					"file": "js/jQuery.lettering.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1777,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1777,
+								1777
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"auto_name": "/*global jQuery */",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1273,6 +1289,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -1304,7 +1324,7 @@
 	"project": "crow-nla.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
