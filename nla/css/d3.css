@@ -65,6 +65,7 @@ h1, h2, h3, h4, h5, h6,
 .ellipsis               { text-overflow: ellipsis; }
 .opacity-hover          { fill-opacity: 1 !important; }
 .stroke-hover           { stroke-width: 2 !important; }
+
 /****************
 *****************
 KERNING STYLE

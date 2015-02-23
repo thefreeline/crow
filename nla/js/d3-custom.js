@@ -6,7 +6,8 @@ $(document).ready(function(){
       d3.selectAll('svg').remove();
       d3.selectAll('.d3-tip').remove();
 //console.log(resultCat,superAgg,aggLevel);
-      update(resultCat,superAgg,aggLevel);
+      //update(resultCat,superAgg,aggLevel);
+      update(resultCat,superAgg);
       //console.log(filter);
   });
 
@@ -16,7 +17,8 @@ $(document).ready(function(){
       d3.selectAll('svg').remove();
       d3.selectAll('.d3-tip').remove();
 //console.log(resultCat,superAgg,aggLevel);
-      update(resultCat,superAgg,aggLevel);
+      // update(resultCat,superAgg,aggLevel);
+      update(resultCat,superAgg);
       //console.log(filter);
   });
 
@@ -26,7 +28,8 @@ $(document).ready(function(){
       d3.selectAll('svg').remove();
       d3.selectAll('.d3-tip').remove();
 //console.log(resultCat,superAgg,aggLevel);      
-      update(resultCat,superAgg,aggLevel);
+      // update(resultCat,superAgg,aggLevel);
+      update(resultCat,superAgg);
       //console.log(filter);
   });
 
@@ -71,8 +74,8 @@ $(".scroll_on_hover").mouseout(function() {
 
 //Define initial chart filters
 var resultCat = "Poor",
-    superAgg = "National",
-    aggLevel = "National";
+    superAgg = "National";
+    //aggLevel = "National";
 
     //BULLET DIMENISIONS
 var bulletmargin = {top: 5, right: 40, bottom: 5, left: 200},
@@ -120,21 +123,22 @@ var bulletchart = d3.bullet()
       .offset([0, 0]);*/
 
 
-function update(filterResult, filterSupAgg, filterAggLevel) {
+//function update(filterResult, filterSupAgg, filterAggLevel) {
+function update(filterResult, filterSupAgg) {  
 
   d3.csv("data/2007_2012_Condition_Data.csv", function(error, data) {  
 
 //console.log(filterResult, filterSupAgg, filterAggLevel);
 
     //Create array of unique values
-    var resultCat = d3.set(data.map(function(d) { return d["Result Category"];   })).values();  
+    //var resultCat = d3.set(data.map(function(d) { return d["Result Category"];   })).values();  
     var superAgg =  d3.set(data.map(function(d) { return d["Super-Aggregation"]; })).values();
-    var aggLevel =  d3.set(data.map(function(d) { return d["Aggregation Level"]; })).values();
+    //var aggLevel =  d3.set(data.map(function(d) { return d["Aggregation Level"]; })).values();
 
     var duration = 250;
   //console.log(resultCat);
 
-    d3.select("#dropdown-ul-result-cat").selectAll("li")
+    /*d3.select("#dropdown-ul-result-cat").selectAll("li")
         .data(resultCat)
       .enter().append("li")
         .attr("role","presentation")
@@ -142,7 +146,7 @@ function update(filterResult, filterSupAgg, filterAggLevel) {
         .attr("role","menuitem")
         .attr("tabindex","-1")
         .attr("href","#")
-        .html(function(d){ return d; });
+        .html(function(d){ return d; });*/
 
     d3.select("#dropdown-ul-super-agg").selectAll("li")
         .data(superAgg)
@@ -154,7 +158,7 @@ function update(filterResult, filterSupAgg, filterAggLevel) {
         .attr("href","#")
         .html(function(d){ return d; });
 
-    d3.select("#dropdown-ul-agg-level").selectAll("li")
+    /*d3.select("#dropdown-ul-agg-level").selectAll("li")
         .data(aggLevel)
       .enter().append("li")
         .attr("role","presentation")
@@ -162,11 +166,11 @@ function update(filterResult, filterSupAgg, filterAggLevel) {
         .attr("role","menuitem")
         .attr("tabindex","-1")
         .attr("href","#")
-        .html(function(d){ return d; });
+        .html(function(d){ return d; });*/
 
-    data = data.filter( function(d){ return d["Result Category"] == filterResult && d["Super-Aggregation"] == filterSupAgg && d["Aggregation Level"] == filterAggLevel; });
+    data = data.filter( function(d){ return d["Result Category"] == filterResult && filterSupAgg == d["Super-Aggregation"]; });
 
-//console.log(data);
+// console.log(data);
 
   
     var bulletsvg = d3.select("#d3-bullet").selectAll("svg")
@@ -248,4 +252,5 @@ function update(filterResult, filterSupAgg, filterAggLevel) {
 
 
 
-update(resultCat,superAgg,aggLevel);
+//update(resultCat,superAgg,aggLevel);
+update(resultCat,superAgg);

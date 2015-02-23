@@ -15,6 +15,7 @@ d3.bullet = function(d) {
     var bulletG = d3.selectAll("#d3-bullet g");
 
     bulletG.each(function(d, i) {
+console.log(i)
 
       var startrange = [+d["Lower Bound 2007"]],
           endrange = [+d["Upper Bound 2007"]],
@@ -27,7 +28,6 @@ d3.bullet = function(d) {
         .attr('class', 'd3-tip')
         .html(function(d) { 
           var d = this.data();
-  console.log(this);
           return '<div id="tooltip-table"><table>' +
           '<tr><td>Super-Aggregation: </td><td>' + d[0]["Super-Aggregation"] + '</td>' +
           '<tr><td>Aggregation Level: </td><td>' + d[0]["Aggregation Level"] + '</td>' +
@@ -158,10 +158,12 @@ d3.bullet = function(d) {
           .attr("width", x1( endrange-startrange ) );
 
       //Add the x-axis
+      if(i == 0){
       var xAxisAppend = g.append("g")
         .attr("class","x-axis")
         .attr("transform", "translate(0," + (bulletheight - bulletmargin.top - bulletmargin.bottom) + ")")
         .call(xAxis);
+      }
 
       var label = g.append("g")
         .style("text-anchor", "start")
