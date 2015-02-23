@@ -15,7 +15,7 @@ d3.bullet = function(d) {
     var bulletG = d3.selectAll("#d3-bullet g");
 
     bulletG.each(function(d, i) {
-console.log(i)
+// console.log(i)
 
       var startrange = [+d["Lower Bound 2007"]],
           endrange = [+d["Upper Bound 2007"]],
@@ -161,7 +161,7 @@ console.log(i)
       if(i == 0){
       var xAxisAppend = g.append("g")
         .attr("class","x-axis")
-        .attr("transform", "translate(0," + (bulletheight - bulletmargin.top - bulletmargin.bottom) + ")")
+        .attr("transform", "translate(0," + 0/*(bulletheight - bulletmargin.top - bulletmargin.bottom)*/ + ")")
         .call(xAxis);
       }
 

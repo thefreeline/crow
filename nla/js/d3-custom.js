@@ -178,15 +178,22 @@ function update(filterResult, filterSupAgg) {
       .enter().append("svg")
         .attr("class", "bullet")
         .attr("width", bulletwidth + bulletmargin.left + bulletmargin.right)
-        .attr("height", bulletheight + bulletmargin.top + bulletmargin.bottom)
+        .attr("height", bulletheight/* + bulletmargin.top + bulletmargin.bottom*/)
 
     var bulletborder = bulletsvg.append("rect")
         .attr("class", "border")
         .attr("width",bulletcontainer)
-        .attr("height", bulletheight + bulletmargin.top + bulletmargin.bottom)
+        .attr("height", bulletheight/* + bulletmargin.top + bulletmargin.bottom*/)
 
     var bulletg = bulletsvg.append("g")
-        .attr("transform", "translate(" + bulletmargin.left + "," + bulletmargin.top + ")")
+        .attr("transform", function(d,i) {
+          console.log(i)
+          if (i==0) {
+            return "translate(" + bulletmargin.left + "," + bulletmargin.top + ")";
+          } else {
+            return "translate(" + bulletmargin.left + "," + 0/*bulletmargin.top*/ + ")";
+          }
+        })
         .call(bulletchart);
 
     var bullettitle = bulletg.append("g")
