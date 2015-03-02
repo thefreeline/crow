@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"fil",
+				"filterResult"
+			],
+			[
+				"conca",
+				"concatAgg"
+			],
+			[
+				"con",
+				"concatAgg"
+			],
+			[
+				"filte",
+				"filterResult"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"start",
+				"startconfidence"
+			],
+			[
+				"bull",
+				"bulletmargin"
+			],
+			[
+				"bu",
+				"bulletmargin"
+			],
+			[
+				"rang",
+				"rangemargin"
+			],
+			[
+				"ran",
+				"rangemargin"
+			],
+			[
+				"range",
+				"rangemargin"
+			],
+			[
+				"r",
+				"rangemargin"
+			],
+			[
+				"slope",
+				"slopemargin"
+			],
+			[
 				"slop",
 				"slopemargin"
 			],
@@ -12,16 +64,8 @@
 				"font-size"
 			],
 			[
-				"start",
-				"startSlope"
-			],
-			[
 				"to",
 				"toggleBut"
-			],
-			[
-				"range",
-				"rangesvg"
 			],
 			[
 				"bac",
@@ -36,20 +80,8 @@
 				"tickFormat"
 			],
 			[
-				"ran",
-				"rangewidth"
-			],
-			[
 				"end",
 				"endSlope"
-			],
-			[
-				"bu",
-				"bulletchart"
-			],
-			[
-				"slope",
-				"slopewidth"
 			],
 			[
 				"sl",
@@ -332,10 +364,6 @@
 				"font-weight"
 			],
 			[
-				"font-",
-				"font-style"
-			],
-			[
 				"class",
 				"classed"
 			],
@@ -486,34 +514,6 @@
 			[
 				"searcha",
 				"searchArrSplit"
-			],
-			[
-				"inde",
-				"indexOf"
-			],
-			[
-				"searchArr",
-				"searchArrSplit"
-			],
-			[
-				"sear",
-				"searchArrSplit"
-			],
-			[
-				"fav",
-				"favItemPos"
-			],
-			[
-				"of",
-				"offset"
-			],
-			[
-				"fail",
-				"failState"
-			],
-			[
-				"set",
-				"setItem"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 6252,
+				"buffer_size": 13739,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,15 +531,7 @@
 			"file": "js/d3-custom.js",
 			"settings":
 			{
-				"buffer_size": 9118,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/d3-slope.js",
-			"settings":
-			{
-				"buffer_size": 2699,
+				"buffer_size": 7552,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,26 +539,33 @@
 			"file": "js/d3-bullet.js",
 			"settings":
 			{
-				"buffer_size": 6748,
+				"buffer_size": 8884,
 				"line_ending": "Unix",
 				"name": "(function() {"
+			}
+		},
+		{
+			"file": "js/d3-slope.js",
+			"settings":
+			{
+				"buffer_size": 4293,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/d3-range.js",
+			"settings":
+			{
+				"buffer_size": 4225,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "css/d3.css",
 			"settings":
 			{
-				"buffer_size": 4813,
+				"buffer_size": 9160,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "js/jQuery.lettering.js",
-			"settings":
-			{
-				"buffer_size": 1777,
-				"line_ending": "Unix",
-				"name": "/*global jQuery */"
 			}
 		}
 	],
@@ -729,6 +728,9 @@
 	},
 	"file_history":
 	[
+		"/Users/lcsmith/Desktop/sysdiagnose_2015.02.05_14-43-56-EST_1073/Crash Report.txt",
+		"/Applications/MAMP/htdocs/crow/nla/js/d3-tip.js",
+		"/Applications/MAMP/htdocs/crow/nla/js/jQuery.lettering.js",
 		"/Applications/MAMP/htdocs/crow/nla/css/d3.scss.css",
 		"/Applications/MAMP/htdocs/crow/nla/css/test.scss.css",
 		"/Applications/MAMP/htdocs/crow/nla/js/d3-slope.js",
@@ -861,6 +863,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"bottom",
+			"();\n",
+			"slopetip",
+			"point",
+			" )",
+			"d3-chart-container",
+			"main-container",
+			"xRange",
 			"ySlope",
 			"axis",
 			"btn-small",
@@ -980,15 +990,7 @@
 			"firstTime",
 			"beenHere",
 			"ssh",
-			"jira",
-			"dev",
-			"cur_FTE",
-			"form_ta",
-			"ring",
-			"page",
-			"480",
-			".visibility = \"hidden\"",
-			"math"
+			"jira"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -996,6 +998,10 @@
 		"regex": false,
 		"replace_history":
 		[
+			"tip",
+			"chart-container-hc-2012-ar",
+			"container-hc-2012-ar",
+			"xScale",
 			"yScale",
 			"btn-sm",
 			"#666",
@@ -1073,7 +1079,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -1082,15 +1088,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6252,
+						"buffer_size": 13739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3067,
-								3067
+								6077,
+								6077
 							]
 						],
 						"settings":
@@ -1100,10 +1106,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 534.0,
+						"translation.y": 1424.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -1112,15 +1118,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9118,
+						"buffer_size": 7552,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1600,
-								1664
+								7251,
+								7251
 							]
 						],
 						"settings":
@@ -1130,7 +1136,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 225.0,
+						"translation.y": 2353.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -1138,47 +1144,19 @@
 				},
 				{
 					"buffer": 2,
-					"file": "js/d3-slope.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2699,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								764,
-								764
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 436.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "js/d3-bullet.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6748,
+						"buffer_size": 8884,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1359,
-								1365
+								766,
+								766
 							]
 						],
 						"settings":
@@ -1189,27 +1167,86 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 373.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "css/d3.css",
+					"buffer": 3,
+					"file": "js/d3-slope.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4813,
+						"buffer_size": 4293,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3793,
-								3793
+								608,
+								618
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/d3-range.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4225,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								702,
+								702
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "css/d3.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7093,
+								7093
 							]
 						],
 						"settings":
@@ -1219,40 +1256,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 767.0,
+						"translation.y": 1717.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "js/jQuery.lettering.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1777,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1777,
-								1777
-							]
-						],
-						"settings":
-						{
-							"auto_name": "/*global jQuery */",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
 					"type": "text"
 				}
 			]

@@ -12,6 +12,7 @@
 
         <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700,400italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Raleway:400,500,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/bootstrap.css"> 
         <link rel="stylesheet" href="css/d3.css"> 
@@ -33,7 +34,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#container-hc-2012-ar" class="ellipsis scroll_on_hover" aria-controls="home" role="tab" data-toggle="tab">Chad Smith - MVIS 5301 Statistical Applications for Visualization</a>
+              <a class="navbar-brand" href="#container-hc-2012-ar" class="ellipsis scroll_on_hover" aria-controls="home" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-tint" aria-hidden="true"></span> National Lakes Assessment</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -43,13 +44,13 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Views <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="#container-hc-2012-ar" class="ellipsis scroll_on_hover" aria-controls="home" role="tab" data-toggle="tab">Highest Concern 2012 and Trend (Any Region)</a></li>
-                    <li><a href="#container-hc-2012-si" class="ellipsis scroll_on_hover" aria-controls="profile" role="tab" data-toggle="tab">Highest Concern 2012 and Trend (Single Indicator)</a></li>
-                    <li><a href="#container-hc-2012-sm" class="ellipsis scroll_on_hover" aria-controls="messages" role="tab" data-toggle="tab">Highest Concern 2012 Size Map</a></li>
+                    <li id="li-hc-2012-ar"><a href="#container-hc-2012-ar" class="ellipsis scroll_on_hover" aria-controls="home" role="tab" data-toggle="tab">Highest Concern 2012 and Trend (Any Region)</a></li>
+                    <li id="li-hc-2012-si"><a href="#container-hc-2012-si" class="ellipsis scroll_on_hover" aria-controls="profile" role="tab" data-toggle="tab">Highest Concern 2012 and Trend (Single Indicator)</a></li>
+                    <li id="li-hc-2012-sm"><a href="#container-hc-2012-sm" class="ellipsis scroll_on_hover" aria-controls="messages" role="tab" data-toggle="tab">Highest Concern 2012 Size Map</a></li>
                     <!-- <li class="divider"></li>
                     <li class="dropdown-header">Other Viewset</li> -->
-                    <li><a href="#container-risk" class="ellipsis scroll_on_hover" aria-controls="settings" role="tab" data-toggle="tab">Risk</a></li>
-                    <li><a href="#container-condition-cat" class="ellipsis scroll_on_hover" aria-controls="settings" role="tab" data-toggle="tab">Condition Category</a></li>
+                    <li id="li-risk"><a href="#container-risk" class="ellipsis scroll_on_hover" aria-controls="settings" role="tab" data-toggle="tab">Risk</a></li>
+                    <li id="li-condition-cat"><a href="#container-condition-cat" class="ellipsis scroll_on_hover" aria-controls="settings" role="tab" data-toggle="tab">Condition Category</a></li>
                   </ul>
                 </li>
               </ul>
@@ -59,9 +60,7 @@
 
         <main role="main">
             <div class="container">
-               <h1 id="title-nw"><span class="glyphicon glyphicon-tint" aria-hidden="true"></span>National Waterways</h1>
-                <p><strong>IMPORTANT: All data currently found on this site is falsified. The purpose of this tool is to demonstrate functionality. No accuracy within the displayed data is implied.</strong></p>
-                
+               <!-- <h1 id="title-nw"></h1> -->
                 <div role="tabpanel" id="tab-panel">
 
                   <!-- Nav tabs -->
@@ -75,8 +74,24 @@
 
                   <!-- Tab panes -->
                   <div class="tab-content">
+
                     <div role="tabpanel" class="tab-pane fade in active" id="container-hc-2012-ar">
-                      <div id="chart-container-hc-2012-ar">
+                        
+                        <div class="spinner fade in">
+                        <h2>FETCHING</h2>
+                          <div class="rect1"></div>
+                          <div class="rect2"></div>
+                          <div class="rect3"></div>
+                          <div class="rect4"></div>
+                          <div class="rect5"></div>
+                        <h2>DATA</h2>
+                        </div>
+
+                      <div id="info-container-hc-2012-ar" class="chart-header fade hidden">
+                        <h4>Percentage of Lakes in Condition of Highest Concern (2012 and Trend)</h4>
+                        <h5>By Indicator (Aggregation: <span id="hc-ar-agg">Std_Fed_Regions--Region_5</span>)</h5>
+                      </div>
+                      <div id="chart-container-hc-2012-ar" class="fade hidden">
                         <div id="d3-bullet-hr"><h6>Percent of Lakes of Highest Concern</h6></div>
                         <div id="d3-slope-hr"><h6>2007-2012</h6></div>
                         <div id="d3-range-hr"><h6>Change in % Points</h6></div>
@@ -85,7 +100,7 @@
                         <div id="d3-range"></div>
                       </div><!--end d#3-chart-container-->
                       
-                      <aside id="controls">
+                      <aside class="controls fade hidden">
                         <h4>OPTIONS</h4>
                         <!-- <h5>Result Category</h5>
                           <div class="dropdown">
@@ -96,10 +111,10 @@
                             <ul id="dropdown-ul-result-cat" class="dropdown-menu" role="menu" aria-labelledby="dropdown-result-cat">
                             </ul>
                           </div> -->
-                        <h5>Super Aggregated Region</h5>
+                        <h5>Aggregation</h5>
                           <div class="dropdown">
                             <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-super-agg" data-toggle="dropdown" aria-expanded="true">
-                              Fed_nonFed
+                              National
                               <span class="caret"></span>
                             </button>
                             <ul id="dropdown-ul-super-agg" class="dropdown-menu" role="menu" aria-labelledby="dropdown-super-agg">
@@ -128,14 +143,51 @@
                         ...more charts are on the way!</h1>
                       </div>
                     </div>
+
+                    <!-- SIZE MAP -->
                     <div role="tabpanel" class="tab-pane fade" id="container-hc-2012-sm">
-                      <div id="chart-container-hc-2012-sm">
-                        <br />
-                        <h1 style="text-align:center; color:#236F77;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <br />
-                        ...and some more charts coming really soon!<br />
-                        Maybe a unicorn too... if you're lucky.</h1>
+
+                      <div class="spinner fade in">
+                        <h2>FETCHING</h2>
+                          <div class="rect1"></div>
+                          <div class="rect2"></div>
+                          <div class="rect3"></div>
+                          <div class="rect4"></div>
+                          <div class="rect5"></div>
+                        <h2>DATA</h2>
                       </div>
+
+                      <div id="info-container-hc-2012-sm" class="chart-header">
+                        <h4>Percentage of Lakes in Condition of Highest Concern (2012)</h4>
+                        <h5>By Metric and Subpopulation (Aggregation:<span id="hc-sm-agg">WSA9_Ecoregions</span>)</h5>
+                      </div>
+
+                      <div id="chart-container-hc-2012-sm" class="fade hidden">
+                        <div id="d3-sizemap-hr">
+                          <div id="d3-sizemap-hr-spacer"></div>
+                        </div>
+                        <div id="d3-sizemap"></div>
+                      </div>
+
+                      <aside class="controls fade hidden">
+                        <h4>OPTIONS</h4>
+                        <h5>Aggregation</h5>
+                          <div class="dropdown">
+                            <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-super-agg" data-toggle="dropdown" aria-expanded="true">
+                              WSA9_Ecoregions
+                              <span class="caret"></span>
+                            </button>
+                            <ul id="dropdown-ul-super-agg" class="dropdown-menu" role="menu" aria-labelledby="dropdown-super-agg">
+                              <!-- LIs built from D3 -->
+                            </ul>
+                          </div>
+                          <br />
+                          <!-- <button id="button-toggle-labels">Turn Labeling On</button>  -->  
+
+                        </aside><!--end #controls-->
                     </div>
+
+                    <!-- RISK -->
                     <div role="tabpanel" class="tab-pane fade" id="container-risk">
                       <div id="chart-container-risk">
                         <br />
@@ -158,7 +210,6 @@
 
             </div><!-- end of #container -->
             <!-- Button trigger modal -->
-
 
         <!-- Modal -->
         <div class="modal fade" id="modal-about" tabindex="-1" role="dialog" aria-labelledby="about this project" aria-hidden="true">
@@ -200,15 +251,18 @@
 
         </main>
 
-        <!-- <footer>
-            
-        </footer> -->
+<footer class="footer">
+                  <div class="container">
+                    <p style="width:750px; color: #fff"><strong>IMPORTANT:</strong> All data currently found on this site is falsified. The purpose of this tool is to demonstrate functionality. No accuracy within the displayed data is implied.</p>
+                  </div>
+                </footer>
         
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>   
         <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>  
         <script src="js/d3-tip.js"></script> 
+        <script src="js/d3-sizemap.js"></script> 
         <script src="js/d3-bullet.js"></script> 
         <script src="js/d3-slope.js"></script>
         <script src="js/d3-range.js"></script>  
