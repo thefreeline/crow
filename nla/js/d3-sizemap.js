@@ -41,7 +41,7 @@ function sizemap(d) {
   	// Compute the new slope y-scale.
     var x = d3.scale.linear()
         .domain([0,1])
-        .range([10,25]);
+        .range([0,25]);
 
   	var size = g.selectAll("rect")
 			.data([d]);
