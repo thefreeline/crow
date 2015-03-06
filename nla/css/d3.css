@@ -16,11 +16,11 @@ h1, h2, h3, h4, h5, h6,
 .footer   { bottom: 0; background: #222; border-color: #080808; position: fixed; width: 100%; box-shadow: 0px 30px 70px #000 ; padding-top: 5px;}
 
 #container-hc-2012-ar, #container-hc-2012-si, #container-hc-2012-sm, #container-risk, #container-condition-cat          { width: 1040px; }
-#chart-container-hc-2012-ar,  #chart-container-hc-2012-sm   { background: #eee; background-image: -webkit-linear-gradient(bottom, #DDD, #FFF); width: 765px; min-height: 100px; display: inline-block; float: left;}
+#chart-header           { background: #eee; background-image: -webkit-linear-gradient(bottom, #DDD, #FFF); width: 765px; min-height: 100px; display: inline-block; float: left;}
 #chart-container-hc-2012-si, #chart-container-risk, #chart-container-condition-cat { background: #fff; width: 1040px; min-height: 386px; padding: 5px; border: 1px solid #666; display: inline-block; }
 
 /* Global Containers */
-#d3-bullet, #d3-bullet-hr, #d3-slope, #d3-slope-hr, #d3-range, #d3-range-hr, #d3-sizemap, #d3-sizemap-hr, .controls, .chart-header {
+#d3-bullet, #d3-bullet-hr, #d3-slope, #d3-slope-hr, #d3-range, #d3-range-hr, #d3-sizemap, #d3-sizemap-hr, #chart-header {
 box-shadow: 1px 1px 5px #000;  
 }
 
@@ -35,10 +35,14 @@ box-shadow: 1px 1px 5px #000;
 #d3-sizemap-hr          { background: #ddd; width: 765px; height: 30px; padding-top:9px; display: inline-block; text-align: center; line-height: 1em; font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .9em; font-weight: bold; float: left; }
 #d3-sizemap-hr-spacer   { width: 190px; height: 30px; display: inline-block; float: left; }
 
-.chart-header           { font-family: 'Raleway', Helvetica, Arial, sans-serif; color: #000; text-transform: none; margin: 7px 275px 7px 0; text-align: center; padding: 10px 0; background: #eee; background-image: -webkit-linear-gradient(bottom, #DDD, #FFF);}
+#chart-header           { font-family: Helvetica, Arial, sans-serif; color: #000; text-transform: none; margin: 7px 275px 0 0; text-align: center; padding: 10px 0; background: #eee; background-image: -webkit-linear-gradient(bottom, #DDD, #FFF);}
+#chart-header #controls { text-align: left; padding: 0px 15px; }
+#controls-collapse      { height: 100px; margin-top: 10px; background: #fff; border-radius: 4px; box-shadow: 0px 0px 2px #aaa inset; border: 1px solid #999; }
+#controls-collapse .controls-group     { height: 100px; border-right: 1px solid #ddd; }
+/*.controls               { width: 245px;  padding: 0px 15px 10px; display: inline-block; float: left; background: #fff; margin-left: 5px; background: #eee; background-image: -webkit-linear-gradient(bottom, #DDD, #FFF); }*/
 
-.controls               { width: 245px; /* min-height: 391px; */ padding: 0px 15px 10px; display: inline-block; float: left; background: #fff; margin-left: 5px; background: #eee; background-image: -webkit-linear-gradient(bottom, #DDD, #FFF); }
-
+#tooltip  { background: #fff; width: 260px; float: right; border: 1px solid #aaa; }
+#tooltip.e:after { content: "\25C0"; margin: -4px 0 0 0; top: 50%; left: -8px;}
 
 
 /* BULLET STYLES */
@@ -84,7 +88,7 @@ box-shadow: 1px 1px 5px #000;
 .axis path, .axis line      { fill: none; stroke: black; shape-rendering: crispEdges; }
 .domain                     { fill: none; }
 
-.btn                    { background: #FFF; border: 1px solid #999;}
+.btn                    { background: #FFF; border: 1px solid #ddd;}
 .ellipsis               { text-overflow: ellipsis; }
 .opacity-hover          { fill-opacity: 1 !important; }
 .stroke-hover           { stroke-width: 2 !important; }
@@ -124,7 +128,7 @@ SPINNER STYLE
 ****************/
 
 .spinner {
-  margin: 100px auto;
+  margin: 100px 275px;
   width: 200px;
   height: 129px;
   text-align: center;

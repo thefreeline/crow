@@ -36,8 +36,8 @@ $(document).on('click', '#li-hc-2012-ar', function () {
     updateHighestConcern(resultCat,concatAgg);
 });
 
-$(document).on('click', '#container-hc-2012-ar #dropdown-ul-super-agg li a', function () {
-    $("#dropdown-super-agg").text($(this).text());
+$(document).on('click', '#dropdown-ul-agg li a', function () {
+    $("#dropdown-agg").text($(this).text());
     $("#hc-ar-agg").text($(this).text());
     var concatAgg = $(this).text();
     d3.selectAll('svg').remove();
@@ -55,8 +55,8 @@ $(document).on('click', '#li-hc-2012-sm', function () {
     updateSizeMap(sizemapResultCat,agg);
 });
 
-$(document).on('click', '#container-hc-2012-sm #dropdown-ul-super-agg li a', function () {
-    $("#container-hc-2012-sm #dropdown-super-agg").text($(this).text());
+$(document).on('click', '#dropdown-ul-agg li a', function () {
+    $("#dropdown-agg").text($(this).text());
     $("#hc-sm-agg").text($(this).text());
     var agg = $(this).text();
     d3.selectAll('svg').remove();
@@ -165,7 +165,7 @@ function updateHighestConcern(filterResult, filterConcatAgg) {
     //var superAgg =  d3.set(data.map(function(d) { return d["Super-Aggregation"]; })).values();
     //var aggLevel =  d3.set(data.map(function(d) { return d["Aggregation Level"]; })).values();
 
-    d3.select("#container-hc-2012-ar #dropdown-ul-super-agg").selectAll("li")
+    d3.select("#dropdown-ul-agg").selectAll("li")
         .data(concatAgg)
       .enter().append("li")
         .attr("role","presentation")
@@ -265,9 +265,9 @@ function updateHighestConcern(filterResult, filterConcatAgg) {
     **************
     *************/
     $(".spinner").removeClass("in").addClass("hidden");
-    $("#info-container-hc-2012-ar").addClass("in").removeClass("hidden");
-    $("#chart-container-hc-2012-ar").addClass("in").removeClass("hidden");
-    $("#container-hc-2012-ar .controls").addClass("in").removeClass("hidden");
+    // $("#info-container-hc-2012-ar").addClass("in").removeClass("hidden");
+    $("#chart-header").addClass("in").removeClass("hidden");
+     $("#chart-container-hc-2012-ar").addClass("in").removeClass("hidden");
     
   });
 }
@@ -304,7 +304,7 @@ function updateSizeMap(filterResult, filterAgg) {
     // console.log(metric);
 
     // Populate Filters 
-    d3.select("#container-hc-2012-sm #dropdown-ul-super-agg").selectAll("li")
+    d3.select("#dropdown-ul-agg").selectAll("li")
         .data(supAggLevel)
       .enter().append("li")
         .attr("role","presentation")
@@ -379,8 +379,8 @@ function updateSizeMap(filterResult, filterAgg) {
     **************
     *************/
     $(".spinner").removeClass("in").addClass("hidden");
-    $("#chart-container-hc-2012-sm").addClass("in").removeClass("hidden");
-    $("#container-hc-2012-sm .controls").addClass("in").removeClass("hidden");
+    $("#chart-header").addClass("in").removeClass("hidden");
+    // $("#container-hc-2012-sm .controls").addClass("in").removeClass("hidden");
 };
 
 
