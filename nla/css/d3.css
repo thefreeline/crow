@@ -13,29 +13,29 @@ h1, h2, h3, h4, h5, h6,
 .tab-content aside h1, .tab-content aside h2, .tab-content aside h3,
 .tab-content aside h4, .tab-content aside h5, .tab-content aside h6 { color: #000; font-family: 'Josefin Slab', serif; font-weight: 700; }
 .modal h4 {color: #666;}
-.footer   { bottom: 0; background: #222; border-color: #080808; position: fixed; width: 100%; box-shadow: 0px 30px 70px #000 ; padding-top: 5px;}
+.footer   { bottom: 0; background-color: #2F6227; border-color: #062F04; position: fixed; width: 100%; box-shadow: 0px 30px 70px #000 ; padding-top: 5px;}
 
 #container-hc-2012-ar, #container-hc-2012-si, #container-hc-2012-sm, #container-risk, #container-condition-cat          { width: 1040px; }
-#chart-header           { background: #eee; background-image: -webkit-linear-gradient(bottom, #DDD, #FFF); width: 765px; min-height: 100px; display: inline-block; float: left;}
+
 #chart-container-hc-2012-si, #chart-container-risk, #chart-container-condition-cat { background: #fff; width: 1040px; min-height: 386px; padding: 5px; border: 1px solid #666; display: inline-block; }
 
 /* Global Containers */
-#d3-bullet, #d3-bullet-hr, #d3-slope, #d3-slope-hr, #d3-range, #d3-range-hr, #d3-sizemap, #d3-sizemap-hr, #chart-header {
+/*#d3-bullet, #d3-bullet-hr, #d3-slope, #d3-slope-hr, #d3-range, #d3-range-hr, #d3-sizemap, #d3-sizemap-hr, #chart-header {
 box-shadow: 1px 1px 5px #000;  
-}
+}*/
 
 
-#d3-bullet              { width: 500px; display: inline-block; float: left; }
-#d3-bullet-hr           { background: #ddd; width: 500px; height: 30px; display: inline-block; text-align: center; line-height: 1em; font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .9em; font-weight: bold; float: left; }
-#d3-slope               { width: 90px; display: inline-block;  float: left; }
-#d3-slope-hr            { background: #ddd; width: 90px; height: 30px; display: inline-block; text-align: center; line-height: 1em; font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .9em; font-weight: bold; float: left; }
-#d3-range               { width: 175px; display: inline-block;  float: left; }
-#d3-range-hr            { background: #ddd; width: 175px; height: 30px; display: inline-block; text-align: center; line-height: 1em; font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .9em; font-weight: bold; float: left; }
-#d3-sizemap             { width: 765px; display: inline-block;  float: left; }
-#d3-sizemap-hr          { background: #ddd; width: 765px; height: 30px; padding-top:9px; display: inline-block; text-align: center; line-height: 1em; font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .9em; font-weight: bold; float: left; }
+#d3-bullet              { border: 1px solid #ddd; width: 500px; display: inline-block; float: left; }
+#d3-bullet-hr           { border: 1px solid #ddd; background: #ddd; width: 500px; height: 30px; display: inline-block; text-align: center; line-height: 1em; font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .9em; font-weight: bold; float: left; }
+#d3-slope               { border: 1px solid #ddd; width: 90px; display: inline-block;  float: left; }
+#d3-slope-hr            { border: 1px solid #ddd; background: #ddd; width: 90px; height: 30px; display: inline-block; text-align: center; line-height: 1em; font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .9em; font-weight: bold; float: left; }
+#d3-range               { border: 1px solid #ddd; width: 175px; display: inline-block;  float: left; }
+#d3-range-hr            { border: 1px solid #ddd; background: #ddd; width: 175px; height: 30px; display: inline-block; text-align: center; line-height: 1em; font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .9em; font-weight: bold; float: left; }
+#d3-sizemap             { border: 1px solid #ddd; width: 765px; display: inline-block;  float: left; }
+#d3-sizemap-hr          { border: 1px solid #ddd; background: #ddd; width: 765px; height: 30px; padding-top:9px; display: inline-block; text-align: center; line-height: 1em; font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .9em; font-weight: bold; float: left; }
 #d3-sizemap-hr-spacer   { width: 190px; height: 30px; display: inline-block; float: left; }
 
-#chart-header           { font-family: Helvetica, Arial, sans-serif; color: #000; text-transform: none; margin: 7px 275px 0 0; text-align: center; padding: 10px 0; background: #eee; background-image: -webkit-linear-gradient(bottom, #DDD, #FFF);}
+#chart-header           { font-family: Helvetica, Arial, sans-serif; color: #000; text-transform: none; margin: 7px 275px 0 0; text-align: center; padding: 10px 0; background: #fff; }
 #chart-header #controls { text-align: left; padding: 0px 15px; }
 #controls-collapse      { height: 100px; margin-top: 10px; background: #fff; border-radius: 4px; box-shadow: 0px 0px 2px #aaa inset; border: 1px solid #999; }
 #controls-collapse .controls-group     { height: 100px; border-right: 1px solid #ddd; }
@@ -78,7 +78,8 @@ box-shadow: 1px 1px 5px #000;
 .sizemap .estimate            { fill: rgb(244, 140, 140); fill-opacity: 1; stroke: rgba(233, 24, 24, 1); stroke-width: 0; }
 .sizemap-hr-title             { width: 40px; display: inline-block; height: 30px; float: left; text-align: center; white-space: nowrap; overflow: hidden; }
 
-.title                      { font-family: 'Raleway', Helvetica, Arial, sans-serif; font-size: 1.2em; font-weight: bold; }
+.title.indicator            { font-family: Helvetica, Arial, sans-serif; font-size: 1.2em; font-weight: normal; }
+.title.metric               { font-family: Helvetica, Arial, sans-serif; font-size: 1.2em; font-weight: bold; }
 .subtitle, .tick            { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .8em; }
 
 .grid .tick line            { stroke: #ddd; stroke-width: .5px; }
@@ -114,6 +115,7 @@ BOOTSTRAP STYLE
 ****************/
 
 #tab-panel          { max-width: 1040px; }
+.navbar-inverse     { background-color: #2F6227; border-color: #062F04; }
 .nav-tabs           { border-bottom: none; font-weight: 700; }
 .nav-tabs > li      { margin-bottom: 0; }
 .nav-tabs > li > a  { background-color: #ddd; color: #000; margin: 0; border-radius: 0; border-top: 1px solid #666; border-left: 1px solid #666; border-right: 1px solid #666; max-width: 280px; white-space: nowrap; overflow: hidden; font-family: 'Raleway','Helvetica Neue', Helvetica, Arial, sans-serif; font-size: .9em; font-weight: bold; }

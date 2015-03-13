@@ -4,15 +4,95 @@
 		"selected_items":
 		[
 			[
+				"this",
+				"thisg"
+			],
+			[
+				"end",
+				"endconfidence"
+			],
+			[
+				"start",
+				"startconfidence"
+			],
+			[
+				"pro",
+				"proportion"
+			],
+			[
+				"nla12",
+				"nla12_ce_indic"
+			],
+			[
+				"nla",
+				"nla12_ce_indic"
+			],
+			[
+				"metric",
+				"metric_cats"
+			],
+			[
+				"mcs",
+				"mcs_indic"
+			],
+			[
+				"in",
+				"indicator"
+			],
+			[
+				"met",
+				"metricSubcat"
+			],
+			[
+				"metri",
+				"metricSubcat"
+			],
+			[
+				"ccc",
+				"ccc_ind_cat"
+			],
+			[
+				"metr",
+				"metricCat"
+			],
+			[
+				"mcs_",
+				"mcs_cat"
+			],
+			[
+				"condition",
+				"conditionCat"
+			],
+			[
+				"con",
+				"conditionCat"
+			],
+			[
+				"cond",
+				"cond_class_cats"
+			],
+			[
+				"ccc_",
+				"ccc_ind_cat"
+			],
+			[
+				"cat",
+				"categories"
+			],
+			[
+				"fro",
+				"forEach"
+			],
+			[
+				"Con",
+				"Condition_Class_Categories"
+			],
+			[
 				"fil",
 				"filterResult"
 			],
 			[
 				"conca",
-				"concatAgg"
-			],
-			[
-				"con",
 				"concatAgg"
 			],
 			[
@@ -22,10 +102,6 @@
 			[
 				"font-",
 				"font-family"
-			],
-			[
-				"start",
-				"startconfidence"
 			],
 			[
 				"bull",
@@ -78,10 +154,6 @@
 			[
 				"tick",
 				"tickFormat"
-			],
-			[
-				"end",
-				"endSlope"
 			],
 			[
 				"sl",
@@ -198,10 +270,6 @@
 			[
 				"child",
 				"children"
-			],
-			[
-				"in",
-				"input"
 			],
 			[
 				"tree",
@@ -446,74 +514,6 @@
 			[
 				"dat",
 				"dataFilter"
-			],
-			[
-				"GovData",
-				"govDataFiltered"
-			],
-			[
-				"go",
-				"govDataFiltered"
-			],
-			[
-				"Go",
-				"Government"
-			],
-			[
-				"result",
-				"result"
-			],
-			[
-				"key",
-				"key"
-			],
-			[
-				"show",
-				"showResults"
-			],
-			[
-				"imag",
-				"imageWidth"
-			],
-			[
-				"rea",
-				"readyCount"
-			],
-			[
-				"app",
-				"appurl"
-			],
-			[
-				"cifs",
-				"CIFSurl"
-			],
-			[
-				"remove",
-				"removeClass"
-			],
-			[
-				"js",
-				"jsonState"
-			],
-			[
-				"cif",
-				"cifsLocation"
-			],
-			[
-				"opensa",
-				"opensans_bold"
-			],
-			[
-				"sea",
-				"searchArrSplit"
-			],
-			[
-				"keyword",
-				"keywordArr"
-			],
-			[
-				"searcha",
-				"searchArrSplit"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 13739,
+				"buffer_size": 17393,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "js/d3-custom.js",
 			"settings":
 			{
-				"buffer_size": 7552,
+				"buffer_size": 16350,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "js/d3-bullet.js",
 			"settings":
 			{
-				"buffer_size": 8884,
+				"buffer_size": 9813,
 				"line_ending": "Unix",
 				"name": "(function() {"
 			}
@@ -564,7 +564,24 @@
 			"file": "css/d3.css",
 			"settings":
 			{
-				"buffer_size": 9160,
+				"buffer_size": 11903,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/interaction.js",
+			"settings":
+			{
+				"buffer_size": 2655,
+				"line_ending": "Unix",
+				"name": "interaction.js"
+			}
+		},
+		{
+			"file": "js/README.md",
+			"settings":
+			{
+				"buffer_size": 2508,
 				"line_ending": "Unix"
 			}
 		}
@@ -863,6 +880,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"[data]",
+			"g.select",
+			"g.",
+			"[data]",
+			"[d]",
+			"forEa",
+			" agg ",
+			"supagg ",
+			"filterResult",
+			"filterConcatAgg",
+			"concatAgg",
+			"grp",
+			"resultCat",
+			"width",
+			"resultCat",
+			"filter",
+			"forEach",
+			"  ",
+			"    ",
+			"[\"Proportion 2007\"]",
+			"[\"Aggregation Level\"]",
+			"[\"Type\"]",
+			"[\"Lower Bound 2007\"]",
+			"[\"Upper Bound 2007\"]",
+			"d[\"Aggregation Level\"]",
+			"[\"Super-Aggregation\"]",
+			"\"Subpopulation\"",
+			" ",
 			"bottom",
 			"();\n",
 			"slopetip",
@@ -962,35 +1007,7 @@
 			"nv.models.stack",
 			"legend",
 			"dataLvl2",
-			"dataFilter",
-			"transformed",
-			"svg",
-			"-946771200",
-			"1025409600000",
-			"format",
-			"dy",
-			"ssh",
-			"getE",
-			"ssh",
-			" language=\"JavaScript\"",
-			"language=\"JavaScript\"",
-			"                                <!--Begin List Divs -->\n",
-			"                                <!-- Begin Grid Divs -->\n",
-			"attr",
-			"id=\"\"",
-			"PROD",
-			"username",
-			"dev_switch",
-			"failState",
-			"activeFilter",
-			"username",
-			"lsFavorites",
-			"welcomePopup",
-			"PROD",
-			"firstTime",
-			"beenHere",
-			"ssh",
-			"jira"
+			"dataFilter"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -998,6 +1015,28 @@
 		"regex": false,
 		"replace_history":
 		[
+			"[d]",
+			"data",
+			"[data]",
+			" subpop ",
+			"type ",
+			"type",
+			"filter_result",
+			"filter_type_subpop",
+			"arr_type_subpop",
+			"metricCat",
+			"conditionCat",
+			"conditionCat\n",
+			"\n",
+			"[nla12_ce_estp]",
+			"[nla12_ce_subpop]",
+			"[nla12_ce_type]",
+			"[nla12_ce_lcb95pctp]",
+			"[nla12_ce_ucb95pctp]",
+			"d[nla12_ce_subpop]",
+			"[nla12_ce_type]",
+			"nla12_ce_subpop",
+			",",
 			"tip",
 			"chart-container-hc-2012-ar",
 			"container-hc-2012-ar",
@@ -1079,7 +1118,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -1088,15 +1127,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13739,
+						"buffer_size": 17393,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6077,
-								6077
+								17314,
+								17314
 							]
 						],
 						"settings":
@@ -1106,10 +1145,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1424.0,
+						"translation.y": 4527.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -1118,28 +1157,28 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7552,
+						"buffer_size": 16350,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7251,
-								7251
+								9938,
+								10087
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2353.0,
+						"translation.y": 4499.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -1148,15 +1187,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8884,
+						"buffer_size": 9813,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								766,
-								766
+								4365,
+								4365
 							]
 						],
 						"settings":
@@ -1167,7 +1206,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 373.0,
+						"translation.y": 1150.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -1199,7 +1238,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -1229,7 +1268,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1238,15 +1277,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9160,
+						"buffer_size": 11903,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7093,
-								7093
+								7167,
+								7167
 							]
 						],
 						"settings":
@@ -1256,10 +1295,69 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1717.0,
+						"translation.y": 922.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/interaction.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1724,
+								1724
+							]
+						],
+						"settings":
+						{
+							"auto_name": "interaction.js",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 292.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2508,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								296,
+								296
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]

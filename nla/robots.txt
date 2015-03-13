@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /I_KLJds95KJdnmwUSn5
+Disallow: /F_KLJds95KJdnmwUSn5

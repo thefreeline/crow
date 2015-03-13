@@ -1,6 +1,11 @@
 (function() {
 
 d3.bullet = function(d) {
+
+  d3.csv(NLA0712_Change_Estimates, function(error, data) {  
+    console.log(data)
+
+  })
   
   var orient = "left", // TODO top & bottom
       reverse = false,
@@ -15,232 +20,230 @@ d3.bullet = function(d) {
     var bulletG = d3.selectAll("#d3-bullet g");
 
     bulletG.each(function(d, i) {
-    // console.log(i)
+         
+        var g = d3.select(this);
+        // console.log("G::", g);
+        // console.log("   ::Data Level 1:: ",i,d)
 
-      var startrange = [+d["Lower Bound 2007"]],
-          endrange = [+d["Upper Bound 2007"]],
-          proportion = [+d["Proportion 2007"]],
-          startconfidence = [+startrange - .05],
-          endconfidence = [+startconfidence + .15],
-          g = d3.select(this);
+        var bulletsub = g.selectAll("g .bullet-sub")
+            .data(d.values /*, function(d) {return d.values;} */)
+          .enter()
+            .append("g")
+            .attr("class","bullet-sub")
+            .attr("height", function(d){ return bulletheight + bulletmargin.top + bulletmargin.bottom; })
+            .attr("transform", function(d,i) { return "translate(0," + ((bulletheight + bulletmargin.top + bulletmargin.bottom)*i) + ")"; })
+            
 
-      var tip = d3.tip()
-        .attr('class', 'd3-tip')
-        .html(function(d) { 
-          var d = this.data();
-          return '<div id="tooltip-table"><table>' +
-          '<tr><td>Super-Aggregation: </td><td>' + d[0]["Super-Aggregation"] + '</td>' +
-          '<tr><td>Aggregation Level: </td><td>' + d[0]["Aggregation Level"] + '</td>' +
-          '<tr><td>Proportion: </td><td>' + d[0]["Proportion 2007"] + '</td>' +
-          '<tr><td>Lower Bound: </td><td>' + d[0]["Lower Bound 2007"] + '</td>' +
-          '<tr><td>Upper Bound: </td><td>' + d[0]["Upper Bound 2007"] + '</td>' +
-          '</div></table>' })
-        .offset([0, 0]);
+      bulletsub.each(function(d, j) {
 
-      var bulletsvg = d3.select("#d3-bullet").selectAll("svg")
-      bulletsvg.call(tip);
+        var gsub = d3.select(this);
+        
+          // console.log(gsub)
 
-      // function for the y grid lines
-      function make_x_axis() {
-        return d3.svg.axis()
-            .scale(x1)
-            .orient("bottom")
-            .ticks(5)
-      }
+          // console.log(j,"::Each Data::",d)
+          
+        var startrange      = +d[nla12_ce_lcb95pctp]/100,
+            endrange        = +d[nla12_ce_ucb95pctp]/100,
+            proportion      = +d[nla12_ce_estp]/100,
+            startconfidence = +startrange - .05,
+            endconfidence   = +startconfidence + .15;
+            
+            // console.log(startrange)
+            // console.log(endrange)
+            // console.log(proportion)
+            // console.log(startconfidence)
+            // console.log(endconfidence)
 
-      // Compute the new x-scale.
-      var x1 = d3.scale.linear()
-          .domain([0,1])
-          .range(reverse ? [width, 0] : [0, width]);
+      var bullettitle = gsub.append("g")
+          .style("text-anchor", "start")
+          .attr("transform", "translate(-150," + bulletheight / 1.5 + ")")
 
-      // Retrieve the old x-scale, if this is an update.
-      var x0 = this.__chart__ || d3.scale.linear()
-          .domain([0, Infinity])
-          .range(x1.range());
+      bullettitle.append("text")
+          .attr("class", "title indicator")
+          .text(function(d,i) { return d[nla12_ce_indic].replace(/_/g," "); });
 
-      // Stash the new scale.
-      this.__chart__ = x1;
+        var tip = d3.tip()
+            .attr('class', 'd3-tip')
+            .html(function(d) { 
+              var d = this.data();
 
-      var xAxis = d3.svg.axis()
-        .scale(x1)
-        .orient("bottom")
-        .tickSize(0)
-        .ticks(5)
-        .tickFormat(tickFormat);
+              return '<div id="tooltip-table"><table>' +
+              '<tr><td>Type: </td><td>'           + d[0][nla12_ce_type] + '</td>' +
+              '<tr><td>Subpopulation: </td><td>'  + d[0][nla12_ce_subpop] + '</td>' +
+              '<tr><td>Indicator: </td><td>'      + d[0][nla12_ce_indic] + '</td>' +
+              '<tr><td>Category: </td><td>'       + d[0][nla12_ce_cat] + '</td>' +
+              '<tr><td>Proportion: </td><td>'     + d3.round(d[0][nla12_ce_estp]/100,2) + '</td>' +
+              '<tr><td>Lower Bound: </td><td>'    + d3.round(d[0][nla12_ce_lcb95pctp]/100,2) + '</td>' +
+              '<tr><td>Upper Bound: </td><td>'    + d3.round(d[0][nla12_ce_ucb95pctp]/100,2) + '</td>' +
+              '</div></table>' })
+            .offset([0, 0]);
 
-      // Derive width-scales from the x-scales.
-      var w0 = bulletWidth(x0),
-          w1 = bulletWidth(x1);
+        var bulletsvg = d3.select("#d3-bullet").selectAll("svg")
+        bulletsvg.call(tip);
 
-      //Draw the y grid lines
-      if(i==0) {
-        var xGrid = g.append("g")            
-            .attr("class", "grid")
-            .attr("transform", "translate(0,10)")
-            .call(make_x_axis()
-                .tickSize(bulletheight-15)
-                .tickFormat("")
-                .tickPadding(10)
-            );
-      } else {
-        var xGrid = g.append("g")            
-            .attr("class", "grid")
-            .attr("transform", "translate(0,5)")
-            .call(make_x_axis()
-                .tickSize(bulletheight-10)
-                .tickFormat("")
-                .tickPadding(10)
-            );
-      }
-      // Update the confidence rects.
-      var confidence = g.selectAll("rect.confidence")
-          //.data(startconfidence);
-          .data([d]);
+        // function for the y grid lines
+        function make_x_axis() {
+          return d3.svg.axis()
+              .scale(x1)
+              .orient("bottom")
+              .ticks(5)
+        }
 
-      confidence.enter().append("rect")
-          .attr("class", function(d,i) { return "confidence"; })
-          .attr("width", 0)
-          .attr("height", (bulletheight - 10))
-          .attr("y", 5)
-          .attr("x", 0 )
-        .transition()
-          .duration(duration)
-          .attr("x", function(d) { 
-            if ( x1( startconfidence ) < 0 ) { sc = 0; } else { sc = x1( startconfidence ); }  return sc; })
-          .attr("width", x1( endconfidence-startconfidence ) );
+        // Compute the new x-scale.
+        var x1 = d3.scale.linear()
+            .domain([0,1])
+            .range(reverse ? [width, 0] : [0, width]);
 
-      // Update the measure rects.
-      var measure = g.selectAll("rect.measure")
-          .data([d]);
+        // Retrieve the old x-scale, if this is an update.
+        var x0 = this.__chart__ || d3.scale.linear()
+            .domain([0, Infinity])
+            .range(x1.range());
 
-      measure.enter().append("rect")
-          .attr("class", function(d, i) { return "measure"; })
-          .attr("width", 0)
-          .attr("height", bulletheight / 3)
-          .attr("x", reverse ? x0 : 0)
-          .attr("y", (( bulletheight / 2 ) - ( (bulletheight / 3)/2 )) )
-        .on('mouseover', function(d) {
-          d3.select(this)
-            .classed('opacity-hover',true)
-            .classed('stroke-hover',true)
-            .call(tip.show)
-        })
-        .on('mouseout',  function() {
-          d3.select(this)
-            .classed('opacity-hover',false)
-            .classed('stroke-hover',false)
-            .call(tip.hide)
-        })
-        .transition()
-          .duration(duration)
-          .attr("width", x1(proportion))
-          .attr("x", 0);
+        // Stash the new scale.
+        this.__chart__ = x1;
 
 
-      // Update the range rects.
-      var range = g.selectAll("rect.range")
-          .data([d]);
+        // Derive width-scales from the x-scales.
+        var w0 = bulletWidth(x0),
+            w1 = bulletWidth(x1);
 
-      range.enter().append("rect")
-          .attr("class","range")
-          .attr("width", 0)
-          .attr("height", bulletheight / 4.5)
-          .attr("y", (( bulletheight / 2 ) - ( (bulletheight / 4.5)/2 )) )
-          .attr("x", 0 )
-        .on('mouseover', function() {
-          tip.show;
-          d3.select(this)
-            .classed('opacity-hover',true)
-            .classed('stroke-hover',true)
-            .call(tip.show)
-        })
-        .on('mouseout',  function() {
-          tip.hide;
-          d3.select(this)
-            .classed('opacity-hover',false)
-            .classed('stroke-hover',false)
-            .call(tip.hide)
-        })
-        .transition()
-          .duration(duration)
-        //.attr("x", function(d,i) { return d[1]  })
-          .attr("x", x1( startrange ) )
-          .attr("width", x1( endrange-startrange ) );
+        //Draw the y grid lines
+        if(i==0 && j==0) {
 
-      //Add the x-axis
-      if(i == 0){
-      var xAxisAppend = g.append("g")
-        .attr("class","x-axis")
-        .attr("transform", "translate(0,0)")
-        .call(xAxis);
-      }
+          var xAxis = d3.svg.axis()
+              .scale(x1)
+              .orient("bottom")
+              .tickSize(0)
+              .ticks(5)
+              .tickFormat(tickFormat);
 
-      var label = g.append("g")
-        .style("text-anchor", "start")
-        .attr("class", "label-ul-bounds")
-        .attr("transform", function(d,i) { return "translate(" + (x1(startrange) + x1(endrange-startrange) + 5)  + ",22)"; })
-      
-      label.append("text")
-          .attr("class", function(d){ 
-            if($("#button-toggle-labels").hasClass("toggle-on")) { 
-              return "active"; 
-            } 
+          //Add the x-axis
+          var xAxisAppend = bulletsub.append("g")
+              .attr("class","x-axis")
+              .attr("transform", "translate(0,0)")
+              .call(xAxis);
+
+          var xGrid = gsub.append("g")            
+              .attr("class", "grid")
+              .attr("transform", "translate(0,10)")
+              .call(make_x_axis()
+                  .tickSize(bulletheight-15)
+                  .tickFormat("")
+                  .tickPadding(10)
+              );
+        } else {
+
+          var xGrid = gsub.append("g")            
+              .attr("class", "grid")
+              .attr("transform", "translate(0,0)")
+              .call(make_x_axis()
+                  .tickSize(bulletheight)
+                  .tickFormat("")
+                  .tickPadding(10)
+              );
+
+          var xAxis = d3.svg.axis()
+              .scale(x1)
+              .orient("bottom")
+              .tickSize(0)
+              .ticks(0)
+              .tickFormat(tickFormat);
+
+          //Add the x-axis
+          var xAxisAppend = bulletsub.append("g")
+              .attr("class","x-axis")
+              .attr("transform", "translate(0,0)")
+              .call(xAxis);
+        }
+        // Update the confidence rects.
+        /*var confidence = gsub.selectAll("rect.confidence")
+            //.data(startconfidence);
+            .data([d]);
+
+        confidence.enter().append("rect")
+            .attr("class", function(d,i) { return "confidence"; })
+            .attr("width", 0)
+            .attr("height", (bulletheight - 10))
+            .attr("y", 5)
+            .attr("x", 0 )
+          .transition()
+            .duration(duration)
+            .attr("x", function(d) { 
+              if ( x1( startconfidence ) < 0 ) { sc = 0; } else { sc = x1( startconfidence ); }  return sc; })
+            .attr("width", x1( endconfidence-startconfidence ) );*/
+
+        // Update the measure rects.
+        var measure = gsub.selectAll("rect.measure")
+            .data([d]);
+
+        measure.enter().append("rect")
+            .attr("class", function(d, i) { return "measure"; })
+            .attr("width", 0)
+            .attr("height", bulletheight / 3)
+            .attr("x", reverse ? x0 : 0)
+            .attr("y", (( bulletheight / 2 ) - ( (bulletheight / 3)/2 )) )
+          .on('mouseover', function(d) {
+              d3.select(this)
+                  .classed('opacity-hover',true)
+                  .classed('stroke-hover',true)
+                  .call(tip.show)
           })
-          .text(function(d) { return startrange + "-" + endrange; });
+          .on('mouseout',  function() {
+              d3.select(this)
+                  .classed('opacity-hover',false)
+                  .classed('stroke-hover',false)
+                  .call(tip.hide)
+          })
+          .transition()
+              .duration(duration)
+              .attr("width", x1(proportion))
+              .attr("x", 0);
 
 
-      /*// Compute the tick format.
-      var format = tickFormat || x1.tickFormat(8);
+        // Update the range rects.
+        var range = gsub.selectAll("rect.range")
+            .data([d]);
 
-      // Update the tick groups.
-      var tick = g.selectAll("g.tick")
-          .data(x1.ticks(8), function(d) {
-            return this.textContent || format(d);
-          });
+        range.enter().append("rect")
+            .attr("class","range")
+            .attr("width", 0)
+            .attr("height", bulletheight / 4.5)
+            .attr("y", (( bulletheight / 2 ) - ( (bulletheight / 4.5)/2 )) )
+            .attr("x", 0 )
+          .on('mouseover', function() {
+              tip.show;
+              d3.select(this)
+                  .classed('opacity-hover',true)
+                  .classed('stroke-hover',true)
+                  .call(tip.show)
+          })
+          .on('mouseout',  function() {
+              tip.hide;
+              d3.select(this)
+                  .classed('opacity-hover',false)
+                  .classed('stroke-hover',false)
+                  .call(tip.hide)
+          })
+          .transition()
+              .duration(duration)
+              .attr("x", x1( startrange ) )
+              .attr("width", x1( endrange-startrange ) );
 
-      // Initialize the ticks with the old scale, x0.
-      var tickEnter = tick.enter().append("g")
-          .attr("class", "tick")
-          .attr("transform", bulletTranslate(x0))
-          .style("opacity", 1e-6);
-
-      tickEnter.append("line")
-          .attr("y1", height)
-          .attr("y2", height * 7 / 6);
-
-      tickEnter.append("text")
-          .attr("text-anchor", "middle")
-          .attr("dy", "1em")
-          .attr("y", height * 7 / 6)
-          .text(format);
-
-      // Transition the entering ticks to the new scale, x1.
-      tickEnter.transition()
-          .duration(0)
-          .attr("transform", bulletTranslate(x1))
-          .style("opacity", 1);
-
-      // Transition the updating ticks to the new scale, x1.
-      var tickUpdate = tick.transition()
-          .duration(0)
-          .attr("transform", bulletTranslate(x1))
-          .style("opacity", 1);
-
-      tickUpdate.select("line")
-          .attr("y1", height)
-          .attr("y2", height * 7 / 6);
-
-      tickUpdate.select("text")
-          .attr("y", height * 7 / 6);
-
-      // Transition the exiting ticks to the new scale, x1.
-      tick.exit().transition()
-          .duration(0)
-          .attr("transform", bulletTranslate(x1))
-          .style("opacity", 1e-6)
-          .remove();*/
+        // add the toggle labels
+        var label = gsub.append("g")
+            .style("text-anchor", "start")
+            .attr("class", "label-ul-bounds")
+            .attr("transform", function(d,i) { return "translate(" + (x1(startrange) + x1(endrange-startrange) + 5)  + ",22)"; })
+        
+        label.append("text")
+            .attr("class", function(d){ 
+              if($("#button-toggle-labels").hasClass("toggle-on")) { 
+                return "active"; 
+              } 
+            })
+            .text(function(d) { return d3.round(startrange,2) + "-" + d3.round(endrange,2); });
+      })
     });
-    //d3.timer.flush();
   }
 
   // measures (actual, forecast)
@@ -309,5 +312,4 @@ d3.bullet = function(d) {
   }
 
 })();
-
 
