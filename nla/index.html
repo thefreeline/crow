@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>MVIS 5301 Statistical Applications for Visualization - Chad Smith</title>
+        <title>National Lakes Assessment</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,19 +15,27 @@
         <link href='http://fonts.googleapis.com/css?family=Bitter:700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/bootstrap.css"> 
+        <link rel="stylesheet" href="css/bootstrap-multiselect.css"> 
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/yay.css">
         <link rel="stylesheet" href="css/d3.css"> 
         <link rel="stylesheet" href="css/main.css">
+        <!-- HTML5 shim IE8 support for HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.min.js"></script>
+        <![endif]-->
 
     </head>
 
-    <body>
+    <body class="yay-hide">
 
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <!-- <nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
+          <button class="btn btn-default navbar-btn yay-toggle" type="button"><i class="fa fa-bars"></i></button>
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -39,7 +47,6 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <!-- <li class="active"><a href="#">Home</a></li> -->
                 <li><a href="#about" data-toggle="modal" data-target="#modal-about">About</a></li>
                 <li><a href="#contact" data-toggle="modal" data-target="#modal-contact">Contact</a></li>
                 <li class="dropdown">
@@ -48,74 +55,188 @@
                     <li id="li-hc-2012-ar"><a href="#container-hc-2012-ar" class="ellipsis scroll_on_hover" aria-controls="home" role="tab" data-toggle="tab">Highest Concern 2012 and Trend (Any Region)</a></li>
                     <li id="li-hc-2012-si"><a href="#container-hc-2012-si" class="ellipsis scroll_on_hover" aria-controls="profile" role="tab" data-toggle="tab">Highest Concern 2012 and Trend (Single Indicator)</a></li>
                     <li id="li-hc-2012-sm"><a href="#container-hc-2012-sm" class="ellipsis scroll_on_hover" aria-controls="messages" role="tab" data-toggle="tab">Highest Concern 2012 Size Map</a></li>
-                    <!-- <li class="divider"></li>
-                    <li class="dropdown-header">Other Viewset</li> -->
+                    
                     <li id="li-risk"><a href="#container-risk" class="ellipsis scroll_on_hover" aria-controls="settings" role="tab" data-toggle="tab">Risk</a></li>
                     <li id="li-condition-cat"><a href="#container-condition-cat" class="ellipsis scroll_on_hover" aria-controls="settings" role="tab" data-toggle="tab">Condition Category</a></li>
                   </ul>
                 </li>
               </ul>
-            </div><!--/.nav-collapse -->
+            </div>
           </div>
-        </nav>
+        </nav> -->
 
+        <!-- <div class="yaybar yay-shrink yay-hide-to-small yay-gestures">
+          <div class="nano">
+            <div class="nano-content">
+
+              <ul>
+                <li class="label">Menu</li>
+
+                <li>
+                  <a class="yay-sub-toggle"><i class="fa fa-indent"></i> Charts<span class="yay-collapse-icon fa fa-angle-down"></span></a>
+                  <ul>
+                    <li>
+                      <a class="yay-sub-toggle" href="#">Highest Concern 2012 and Trend (By Region)
+                    </li>
+                    <li>
+                      <a class="yay-sub-toggle" href="#">Highest Concern 2012 and Trend (By Indicator)</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="active">
+                  <a class="yay-sub-toggle"><i class="fa fa-book"></i> Dictionary <span class="yay-collapse-icon fa fa-angle-down"></span>
+                  </a>
+                  <ul>
+                    <li><a class="yay-sub-toggle" href="#">Benthic Invertebrates</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Zooplankton</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Acidification</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Dissolved Oxygen</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Nitrogen (total)</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Phosphorus (total)</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Trophic State</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Chlorophyll a Risk Index</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Chlorophyll_a_Risk_Littoral</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Microcystin Presence</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Microcystin_Risk_Littoral</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Microcystin Risk Index</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Cyanobacteria Risk Index</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Atrazine Presence</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Atrazine 4 ppb</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Methylmercury Top</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Total Mercury Bottom</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Total Mercury Top</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Drawdown</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Lake_Drawdown_Exposure</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Lakeshore Disturbance</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Lakeshore Habitat</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Physical Habitat Complexity</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                    <li><a class="yay-sub-toggle" href="#">Shallow Water Habitat</a>
+                      <ul>
+                      <li>Description</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="label">Stats</li>
+              </ul>
+
+            </div>
+          </div>
+        </div> -->
         <main role="main">
-            <div class="container">
+
+            <div class="container chart-container">
                <!-- <h1 id="title-nw"></h1> -->
                 <div role="tabpanel" id="tab-panel">
-
-                  <!-- Nav tabs -->
-                  <!-- <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#container-hc-2012-ar" class="ellipsis scroll_on_hover" aria-controls="home" role="tab" data-toggle="tab">Highest Concern 2012 and Trend (Any Region)</a></li>
-                    <li role="presentation"><a href="#container-hc-2012-si" class="ellipsis scroll_on_hover" aria-controls="profile" role="tab" data-toggle="tab">Highest Concern 2012 and Trend (Single Indicator)</a></li>
-                    <li role="presentation"><a href="#container-hc-2012-sm" class="ellipsis scroll_on_hover" aria-controls="messages" role="tab" data-toggle="tab">Highest Concern 2012 Size Map</a></li>
-                    <li role="presentation"><a href="#container-risk" class="ellipsis scroll_on_hover" aria-controls="settings" role="tab" data-toggle="tab">Risk</a></li>
-                    <li role="presentation"><a href="#container-condition-cat" class="ellipsis scroll_on_hover" aria-controls="settings" role="tab" data-toggle="tab">Condition Category</a></li>
-                  </ul> -->
 
                   <!-- Tab panes -->
                   <div class="tab-content">
 
-                      <div id="chart-header" class="fade hidden">
-                        <h4>Percentage of Lakes in Condition of Highest Concern (2012 and Trend)</h4>
-                        <h5>By Indicator (Aggregation: <span id="hc-ar-agg">Std_Fed_Regions--Region_5</span>)</h5>
-
-                        <div id="controls" class="fade in">
-                          <button class="btn btn-default btn-xs" type="button" data-toggle="collapse" data-target="#controls-collapse" aria-expanded="false" aria-controls="controls-collapse">
-                            Controls<span class="caret"></span>
-                          </button>
-                          <div class="collapse" id="controls-collapse">
-                            <!-- CONTROLS -->
-                            <div class="col-xs-4 col-sm-4 col-md-4 controls-group">
-                              <h5>Filters</h5>
-                              <div class="dropdown">
-                                Aggregation:
-                                <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-agg" data-toggle="dropdown" aria-expanded="true">
-                                  National
-                                  <span class="caret"></span>
-                                </button>
-                                <ul id="dropdown-ul-agg" class="dropdown-menu" role="menu" aria-labelledby="dropdown-agg">
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="col-xs-4 col-sm-4 col-md-4 controls-group">
-                              <h5>Labels</h5>
-                              <!-- <button id="button-toggle-labels">Turn Labeling On</button>  -->
-                              <input type ="checkbox" name="checkbox-hc-2012" value="hc-2012-percent"> Percent Highest Concern <br /> 
-                              <input type ="checkbox" name="checkbox-hc-2012" value="hc-2012"> 2007-2012 <br /> 
-                              <input type ="checkbox" name="checkbox-hc-2012" value="hc-2012"> Change in % Points <br /> 
-                            </div>
-                            <div class="col-xs-4 col-sm-4 col-md-4 controls-group">
-                              
-                            </div>
-                          </div>
+                      <div id="chart-header" class="fade in hidden">
+                        <div id="chart-header-text">
+                          <h4>Percentage of Lakes in Condition of Highest Concern <br /> (2012 and Trend)</h4>
+                          <h5>By Indicator (Aggregation: <span id="hc-ar-agg">National</span>)</h5>
                         </div>
-                      </div>
+                        <div class="chart-header-view" id="view-trend">Trend</div>
+                        <div class="chart-header-view" id="view-size">Size</div>
+                        <div class="chart-header-view" id="view-risk">Risk</div>
+                      </div> <!-- end #chart-header -->
                       
-                  <!-- HIGHEST CONCERN 2012 -->
-                    <div role="tabpanel" class="tab-pane fade in active" id="container-hc-2012-ar">
-                        
-                        <div class="spinner fade in">
+                      <div class="spinner fade in hidden">
                         <h2>FETCHING</h2>
                           <div class="rect1"></div>
                           <div class="rect2"></div>
@@ -123,24 +244,44 @@
                           <div class="rect4"></div>
                           <div class="rect5"></div>
                         <h2>DATA</h2>
-                        </div>
+                      </div>
+                      
+<!-- HIGHEST CONCERN 2012 -->
+                    <div role="tabpanel" class="tab-pane fade hidden" id="container-hc-2012-ar">   
 
-
-                      <div id="chart-container-hc-2012-ar" class="fade hidden">
-                        <div id="d3-bullet-hr"><h6>Percent of Lakes of Highest Concern</h6></div>
-                        <div id="d3-slope-hr"><h6>2007-2012</h6></div>
-                        <div id="d3-range-hr"><h6>Change in % Points</h6></div>
+                      <div id="chart-container-hc-2012-ar" class="fade in">
+                        <div id="d3-bullet-hr" class="column-header"><h6>Percent of Lakes of Highest Concern</h6></div>
+                        <div id="d3-slope-hr" class="column-header"><h6>2007-2012</h6></div>
+                        <div id="d3-range-hr" class="column-header"><h6>Change in % Points</h6></div>
+                        <div id="d3-bullet-axis" class="axis-container"></div>
+                        <div id="d3-slope-axis" class="axis-container"></div>
+                        <div id="d3-range-axis" class="axis-container"></div>
                         <div id="d3-bullet"></div>
                         <div id="d3-slope"></div>
                         <div id="d3-range"></div>
                       </div><!--end d#3-chart-container-->
                       
-                      <!-- <aside id="tooltip" class="controls fade in e">
-                        <h4>Tooltip Container</h4>
-                      </aside> -->
+                      <aside id="controls" class="fade in">
+                        <h4>OPTIONS</h4>
+                        <h5>Aggregation</h5>
+                          <div class="dropdown">
+                            <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-agg" data-toggle="dropdown" aria-expanded="true">
+                              National
+                              <span class="caret"></span>
+                            </button>
+                            <ul id="dropdown-ul-agg" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdown-ul-agg">
+                              <!-- LIs built from D3 -->
+                            </ul>
+                          </div>
+
+                          <br />
+                          <button id="button-toggle-labels">Turn Labeling On</button>   
+
+                        </aside><!--end #controls-->
+
                     </div>
 
-                    <div role="tabpanel" class="tab-pane fade" id="container-hc-2012-si">
+                    <div role="tabpanel" class="tab-pane fade hidden" id="container-hc-2012-si">
                       <div id="chart-container-hc-2012-si">
                         <br />
                         <h1 style="text-align:center; color:#236F77;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> <br />
@@ -148,42 +289,17 @@
                       </div>
                     </div>
 
-                    <!-- SIZE MAP -->
-                    <div role="tabpanel" class="tab-pane fade" id="container-hc-2012-sm">
+<!-- SIZE MAP -->
+                    <div role="tabpanel" class="tab-pane fade hidden" id="container-hc-2012-sm">
 
-                      <div class="spinner fade in">
-                        <h2>FETCHING</h2>
-                          <div class="rect1"></div>
-                          <div class="rect2"></div>
-                          <div class="rect3"></div>
-                          <div class="rect4"></div>
-                          <div class="rect5"></div>
-                        <h2>DATA</h2>
-                      </div>
-
-                      <div id="chart-container-hc-2012-sm" class="fade hidden">
+                      <div id="chart-container-hc-2012-sm" class="fade in">
                         <div id="d3-sizemap-hr">
-                          <div id="d3-sizemap-hr-spacer"></div>
+                          <!-- <div id="d3-sizemap-hr-spacer"></div> -->
                         </div>
                         <div id="d3-sizemap"></div>
                       </div>
 
-                      <aside class="controls fade hidden">
-                        <h4>OPTIONS</h4>
-                        <h5>Aggregation</h5>
-                          <div class="dropdown">
-                            <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-super-agg" data-toggle="dropdown" aria-expanded="true">
-                              WSA9_Ecoregions
-                              <span class="caret"></span>
-                            </button>
-                            <ul id="dropdown-ul-super-agg" class="dropdown-menu" role="menu" aria-labelledby="dropdown-super-agg">
-                              <!-- LIs built from D3 -->
-                            </ul>
-                          </div>
-                          <br />
-                          <!-- <button id="button-toggle-labels">Turn Labeling On</button>  -->  
-
-                        </aside><!--end #controls-->
+                     
                     </div>
 
                     <!-- RISK -->
@@ -202,6 +318,48 @@
                         You and I, we'll get along well....</h1>
                       </div>
                     </div><!-- end of tab-panes -->
+
+                     <aside id="controls" class="fade in">
+                        <div id="filters">
+
+                          <h4>OPTIONS</h4>
+
+                          <h5>Aggregation</h5>
+                          <div class="dropdown">
+                            <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-type-sizemap" data-toggle="dropdown" aria-expanded="true">
+                              WSA9_Ecoregions
+                              <span class="caret"></span>
+                            </button>
+                            <ul id="dropdown-ul-type-sizemap" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdown-super-agg">
+                              <!-- LIs built from D3 -->
+                            </ul>
+                          </div>
+
+                         <!--  <h5>Indicator</h5>
+                          <div class="dropdown">
+                            <button class="btn btn-sm dropdown-toggle" type="button" id="dropdown-indic-sizemap" data-toggle="dropdown" aria-expanded="true" multiple="multiple">
+                              (All)
+                              <span class="caret"></span>
+                            </button>
+                            <ul id="dropdown-ul-indic-sizemap" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdown-super-agg">
+                            </ul>
+                          </div> -->
+
+                        </div>
+
+                        <div id="how-to">
+                          <h5>How To Use This Dashboard</h5>
+                        </div>
+
+                        <div id="notes">
+                          <h5>Additional Information</h5>
+                        </div>
+
+                        <div id="map-container" class="fade in">
+                          <img src="img/map.png">
+                        </div><!-- end #map-container -->
+
+                      </aside><!--end #controls aside-->
 
                   </div><!-- end of tab-content -->
 
@@ -255,25 +413,26 @@
         </div>
 
         </main>
-
+        <!-- 
         <footer class="footer">
-          <div class="container">
-            <!-- <p style="width:750px; color: #fff"><strong>IMPORTANT:</strong> All data currently found on this site is falsified. The purpose of this tool is to demonstrate functionality. No accuracy within the displayed data is implied.</p>
-          </div> -->
-        </footer>
+        </footer> -->
         
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+        <!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->         
+        <script src="js/jquery-1.11.0.min.js"></script> 
         <script src="js/bootstrap.min.js"></script>   
-        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>  
+        <script src="js/jquery.nanoscroller.min.js"></script>
+        <script src="js/yay.js"></script> 
+        <script src="js/d3.v3.min.js"></script> 
         <script src="js/d3-tip.js"></script> 
         <script src="js/d3-sizemap.js"></script> 
         <script src="js/d3-bullet.js"></script> 
         <script src="js/d3-slope.js"></script>
         <script src="js/d3-range.js"></script>  
         <script src="js/d3-custom.js"></script> 
-        <script src="js/jquery.lettering.js"></script> 
         <script src="js/interaction.js"></script>
+        <script src="js/bootstrap-multiselect.js"></script>         
         <script src="js/main.js"></script>
 
     </body>

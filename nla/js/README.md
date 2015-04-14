@@ -4,7 +4,6 @@
 // Condition Categories are built from the 'Condition class categories.csv' file.  
     -- This will allow for flexibility if Indicators or categories are added or removed from the dataset
 
-
 /************
 *************
 ALIASES - NLA12_Condition_Estimates
@@ -64,3 +63,16 @@ var nla0712_ce_record = "Record",
     nla0712_ce_ucb95pctu2 = "UCB95Pct.U_2",
     nla0712_ce_ub2_ub1 = "UB2-UB1",
     nla0712_ce_lb2_lb1 = "LB2-LB1";
+
+
+####################
+NOTES
+####################
+
+-   Added Metric Categories to Condition Estimate Data
+-   Added Categories for the following Indicators:
+        Chlorophyll_a_Risk_Littoral
+        Microcystin_Risk_Littoral
+        Total_Mercury_Bottom
+        Lake_Drawdown_Exposure
+-   Had to subtract 57.5px from highest risk range intervals...not sure why, but it works... would like to know why

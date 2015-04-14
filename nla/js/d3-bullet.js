@@ -1,66 +1,75 @@
 (function() {
 
-d3.bullet = function(d) {
-
-  d3.csv(NLA0712_Change_Estimates, function(error, data) {  
-    console.log(data)
-
-  })
+d3.charts = { 
+  chart: function(d) {
   
   var orient = "left", // TODO top & bottom
       reverse = false,
       duration = 500,
-      width = 380,
-      height = 30,
-      tickFormat = d3.format(".0%");
+      width = bulletwidth,
+      height = bulletheight,
+      tickFormat = d3.format(".0%"),
+      newData = [],
+      rowCount = 0; // Used to apply data attribute which cotrols highlighting
 
-  // For each small multiple…
-  function bullet(g) {
-   
-    var bulletG = d3.selectAll("#d3-bullet g");
+  /************
+  *************
+  BULLET FUNCTION
+  *************
+  ************/
+  function drawChart(g) {
+
+    
+    var bulletG = d3.selectAll("#d3-bullet g"),
+    axisFlag = 0; // Determine whether to add axis or gridlines
+        
 
     bulletG.each(function(d, i) {
-         
-        var g = d3.select(this);
-        // console.log("G::", g);
-        // console.log("   ::Data Level 1:: ",i,d)
+      var g = d3.select(this);
 
-        var bulletsub = g.selectAll("g .bullet-sub")
-            .data(d.values /*, function(d) {return d.values;} */)
-          .enter()
-            .append("g")
-            .attr("class","bullet-sub")
-            .attr("height", function(d){ return bulletheight + bulletmargin.top + bulletmargin.bottom; })
-            .attr("transform", function(d,i) { return "translate(0," + ((bulletheight + bulletmargin.top + bulletmargin.bottom)*i) + ")"; })
-            
+      var bulletsub = g.selectAll("g .bullet-sub")
+          .data(d.values)
+        .enter()
+          .append("g")
+          .attr("class","bullet-sub")
+          .attr("data-loc",function(){  
+            i = rowCount; 
+            rowCount++; 
+            return "chart-loc-" + i; 
+          })
+          .attr("height", function(d){ return bulletheight + bulletmargin.top + bulletmargin.bottom; })
+          .attr("transform", function(d,i) { return "translate(0," + ((bulletheight + bulletmargin.top + bulletmargin.bottom)*i) + ")"; })          
 
       bulletsub.each(function(d, j) {
 
-        var gsub = d3.select(this);
-        
-          // console.log(gsub)
+        // Select parent nodes to add borders
+        var bulletsvg = d3.select(this.parentNode.parentNode);
 
-          // console.log(j,"::Each Data::",d)
+        // Add borders
+        var bulletborder = bulletsvg.insert("rect",":first-child")
+                .attr("class", "border")
+                // .attr("data-loc",j)
+                .attr("width",bulletcontainer)
+                .attr("height", bulletheight + bulletmargin.top + bulletmargin.bottom)
+                .attr("transform",function(d,i){ return "translate(0," + ( ( bulletheight + bulletmargin.top + bulletmargin.bottom) * j )  + ")"; })
+
+        // Select this element to add small multiple
+        var gsub = d3.select(this);
+        // console.log(gsub)
           
         var startrange      = +d[nla12_ce_lcb95pctp]/100,
             endrange        = +d[nla12_ce_ucb95pctp]/100,
             proportion      = +d[nla12_ce_estp]/100,
             startconfidence = +startrange - .05,
             endconfidence   = +startconfidence + .15;
-            
-            // console.log(startrange)
-            // console.log(endrange)
-            // console.log(proportion)
-            // console.log(startconfidence)
-            // console.log(endconfidence)
 
-      var bullettitle = gsub.append("g")
-          .style("text-anchor", "start")
-          .attr("transform", "translate(-150," + bulletheight / 1.5 + ")")
+        var bullettitle = gsub.append("g")
+            .style("text-anchor", "start")
+            .attr("transform", "translate(-150," + bulletheight / 1.5 + ")")
 
-      bullettitle.append("text")
-          .attr("class", "title indicator")
-          .text(function(d,i) { return d[nla12_ce_indic].replace(/_/g," "); });
+        bullettitle.append("text")
+            .attr("class", "title indicator")
+            .text(function(d,i) { return d[nla12_ce_indic].replace(/_/g," "); });
 
         var tip = d3.tip()
             .attr('class', 'd3-tip')
@@ -82,7 +91,7 @@ d3.bullet = function(d) {
         bulletsvg.call(tip);
 
         // function for the y grid lines
-        function make_x_axis() {
+        function make_gridlines() {
           return d3.svg.axis()
               .scale(x1)
               .orient("bottom")
@@ -107,54 +116,40 @@ d3.bullet = function(d) {
         var w0 = bulletWidth(x0),
             w1 = bulletWidth(x1);
 
-        //Draw the y grid lines
-        if(i==0 && j==0) {
+        // console.log(axisFlag);
+        // If axisFlag == 0, add the axis to the axis container
+        if(axisFlag==0) {
 
           var xAxis = d3.svg.axis()
               .scale(x1)
-              .orient("bottom")
-              .tickSize(0)
+              .orient("top")
+              .tickSize(5)
               .ticks(5)
               .tickFormat(tickFormat);
 
           //Add the x-axis
-          var xAxisAppend = bulletsub.append("g")
-              .attr("class","x-axis")
-              .attr("transform", "translate(0,0)")
+          var xAxissvg = d3.select("#d3-bullet-axis")
+              .append("svg")
+              .attr("class","axis-container")              
+              .attr("width", bulletwidth + bulletmargin.left + bulletmargin.right )
+
+          var xAxisAppend = xAxissvg.append("g")
+              .attr("transform", "translate(" + bulletmargin.left + ",20)")
               .call(xAxis);
 
-          var xGrid = gsub.append("g")            
-              .attr("class", "grid")
-              .attr("transform", "translate(0,10)")
-              .call(make_x_axis()
-                  .tickSize(bulletheight-15)
-                  .tickFormat("")
-                  .tickPadding(10)
-              );
-        } else {
-
-          var xGrid = gsub.append("g")            
-              .attr("class", "grid")
-              .attr("transform", "translate(0,0)")
-              .call(make_x_axis()
-                  .tickSize(bulletheight)
-                  .tickFormat("")
-                  .tickPadding(10)
-              );
-
-          var xAxis = d3.svg.axis()
-              .scale(x1)
-              .orient("bottom")
-              .tickSize(0)
-              .ticks(0)
-              .tickFormat(tickFormat);
-
-          //Add the x-axis
-          var xAxisAppend = bulletsub.append("g")
-              .attr("class","x-axis")
-              .attr("transform", "translate(0,0)")
-              .call(xAxis);
         }
+
+        // Add the gridlines
+        var xGrid = gsub.append("g")            
+            .attr("class", "grid")
+            .attr("transform", "translate(0,0)")
+            .call(make_gridlines()
+                .tickSize(bulletheight)
+                .tickFormat("")
+                .tickPadding(10)
+            );
+
+
         // Update the confidence rects.
         /*var confidence = gsub.selectAll("rect.confidence")
             //.data(startconfidence);
@@ -242,43 +237,14 @@ d3.bullet = function(d) {
               } 
             })
             .text(function(d) { return d3.round(startrange,2) + "-" + d3.round(endrange,2); });
-      })
-    });
+
+        axisFlag++; // Increment the axis flag
+      }); // end bulletsub.each
+    }); //end bulletG.each
+  }  // end of function drawChart(g)
+  return drawChart;
   }
-
-  // measures (actual, forecast)
-  bullet.measures = function(x) {
-    if (!arguments.length) return measures;
-    measures = x;
-    return bullet;
-  };
-
-  bullet.width = function(x) {
-    if (!arguments.length) return width;
-    width = x;
-    return bullet;
-  };
-
-  bullet.height = function(x) {
-    if (!arguments.length) return height;
-    height = x;
-    return bullet;
-  };
-
-  bullet.tickFormat = function(x) {
-    if (!arguments.length) return tickFormat;
-    tickFormat = x;
-    return bullet;
-  };
-
-  bullet.duration = function(x) {
-    if (!arguments.length) return duration;
-    duration = x;
-    return bullet;
-  };
-
-  return bullet;
-};
+}
 
   function bulletRanges(d) {
     range = {"range":[]}
@@ -310,6 +276,19 @@ d3.bullet = function(d) {
       return Math.abs(x(d) - x0);
     };
   }
+
+  function slopetranslate(x) {
+    return function(d) {
+      console.log(x(d));
+      return "translate(" + "10," + x(d) + ")";
+    };
+  }
+
+  function tickFormat(x) {
+    if (!arguments.length) return tickFormat;
+    tickFormat = x;
+    return tickFormat;
+  };
 
 })();
 
